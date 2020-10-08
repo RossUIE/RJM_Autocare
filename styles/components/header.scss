@@ -6,9 +6,9 @@
     width: 100%;
     position: fixed;
     z-index: 9999999;
-    background: $black;
+    background: $headerBackground;
 
-    @media only screen and (max-width: 659px) {
+    @media only screen and (max-width: 800px) {
         padding: rem(20 40);
     }
 
@@ -33,10 +33,11 @@
             list-style: none;
             
             li {
-                margin: rem(0 20);
+                margin: rem(0 15);
                 color: $white;
                 position: relative;
                 padding-bottom: 8px;
+
                     &:before,
                     &:after {
                         content: '';
@@ -70,14 +71,8 @@
                             transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
                         }
                     }
-
-                    }
-
-                    &:hover {
-                        color: $brand-red;
-                    }
-                
-                }
+            } 
+        }
                         
         @media only screen and (max-width: 659px) {
             position: absolute;

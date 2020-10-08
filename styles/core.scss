@@ -11,7 +11,7 @@ html, body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: $bodyText;
     scroll-behavior: smooth;
 }
@@ -38,4 +38,11 @@ a {
         display: none;
     }
 
+}
+
+.container {
+    max-width: rem(1100);
+    width: 100%;
+    margin: auto;
+    padding: rem(0 20);
 }

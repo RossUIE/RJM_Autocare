@@ -10,7 +10,7 @@ html, body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #343434;
   scroll-behavior: smooth; }
 
@@ -33,6 +33,12 @@ a {
     .c-backdrop {
       display: none; } }
 
+.container {
+  max-width: 68.75rem;
+  width: 100%;
+  margin: auto;
+  padding: 0 1.25rem; }
+
 .c-header {
   display: flex;
   justify-content: space-between;
@@ -41,8 +47,8 @@ a {
   width: 100%;
   position: fixed;
   z-index: 9999999;
-  background: #1E1E1E; }
-  @media only screen and (max-width: 659px) {
+  background: rgba(0, 0, 0, 0.7); }
+  @media only screen and (max-width: 800px) {
     .c-header {
       padding: 1.25rem 2.5rem; } }
   .c-header_logo {
@@ -61,7 +67,7 @@ a {
       display: flex;
       list-style: none; }
       .c-header_links ul li {
-        margin: 0 1.25rem;
+        margin: 0 0.9375rem;
         color: #fff;
         position: relative;
         padding-bottom: 8px; }
@@ -88,8 +94,6 @@ a {
           transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s; }
         .c-header_links ul li:hover:after, .c-header_links ul li:focus:after {
           transition: transform 0s 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0s 0.2s; }
-      .c-header_links ul:hover {
-        color: #A30000; }
     @media only screen and (max-width: 659px) {
       .c-header_links {
         position: absolute;
@@ -143,5 +147,43 @@ a {
   to {
     opacity: 1;
     transform: translateX(0px); } }
+.c-main-banner {
+  width: 100%;
+  min-height: 31.25rem;
+  position: relative;
+  display: flex;
+  align-items: center; }
+  .c-main-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../assets/banner.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    pointer-events: none;
+    background-size: cover;
+    filter: brightness(35%); }
+  .c-main-banner_content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    margin-left: 6.25rem;
+    font-size: 1.25rem;
+    font-weight: 400; }
+    @media only screen and (max-width: 800px) {
+      .c-main-banner_content {
+        margin-left: 2.5rem; } }
+    .c-main-banner_content h1 {
+      font-weight: 400; }
+    .c-main-banner_content .brand {
+      display: block;
+      color: #A30000;
+      font-size: 2.25rem;
+      font-weight: 600; }
 
 /*# sourceMappingURL=main.css.map */
