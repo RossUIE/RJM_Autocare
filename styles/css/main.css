@@ -20,6 +20,19 @@ p, h1, h2, h3, h4, h5 {
 a {
   text-decoration: none; }
 
+button {
+  background-color: #A30000;
+  border-radius: 0.3125rem;
+  padding: 0.625rem 1.875rem;
+  cursor: pointer;
+  font: inherit;
+  color: #fff;
+  border: none;
+  z-index: 9999999; }
+  button:hover {
+    background: #952626;
+    transition: all 0.2s ease; }
+
 .c-backdrop {
   position: fixed;
   top: 70px;
@@ -34,23 +47,28 @@ a {
       display: none; } }
 
 .container {
-  max-width: 68.75rem;
+  max-width: 87.5rem;
   width: 100%;
   margin: auto;
   padding: 0 1.25rem; }
 
+.divider {
+  max-width: 6.25rem;
+  width: 100%;
+  height: 0.3125rem;
+  background-color: #A30000;
+  margin-top: 0.1875rem; }
+
 .c-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.25rem 7.5rem;
+  padding: 1.25rem 0;
   width: 100%;
   position: fixed;
   z-index: 9999999;
   background: rgba(0, 0, 0, 0.7); }
-  @media only screen and (max-width: 800px) {
-    .c-header {
-      padding: 1.25rem 2.5rem; } }
+  .c-header_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
   .c-header_logo {
     background-image: url("../../assets/logo/logo_v1.svg");
     background-size: auto 100%;
@@ -149,7 +167,7 @@ a {
     transform: translateX(0px); } }
 .c-main-banner {
   width: 100%;
-  min-height: 31.25rem;
+  min-height: 25rem;
   position: relative;
   display: flex;
   align-items: center; }
@@ -172,18 +190,107 @@ a {
     align-items: center;
     color: #fff;
     text-transform: uppercase;
-    margin-left: 6.25rem;
     font-size: 1.25rem;
-    font-weight: 400; }
-    @media only screen and (max-width: 800px) {
-      .c-main-banner_content {
-        margin-left: 2.5rem; } }
+    padding-top: 1.25rem; }
     .c-main-banner_content h1 {
       font-weight: 400; }
     .c-main-banner_content .brand {
       display: block;
       color: #A30000;
-      font-size: 2.25rem;
+      font-size: 3rem;
       font-weight: 600; }
+
+.c-process {
+  background-color: #E7E7E7;
+  padding: 1.25rem 0; }
+  .c-process-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap; }
+    @media only screen and (max-width: 768px) {
+      .c-process-content {
+        justify-content: center; } }
+    .c-process-content img {
+      min-width: 4.375rem;
+      height: 4.375rem; }
+    .c-process-content_item {
+      padding: 1.25rem 0;
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      flex-basis: 360px; }
+      @media only screen and (max-width: 768px) {
+        .c-process-content_item {
+          flex-direction: column;
+          text-align: center; } }
+      .c-process-content_item .item-content {
+        margin-left: 1.25rem; }
+        @media only screen and (max-width: 768px) {
+          .c-process-content_item .item-content {
+            margin-left: 0; } }
+      .c-process-content_item h3 {
+        margin: 0.625rem 0; }
+
+.c-about {
+  padding: 3.125rem 0; }
+  .c-about_content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px; }
+    .c-about_content .about-text {
+      width: 50%;
+      flex-grow: 1; }
+      .c-about_content .about-text h2 {
+        text-transform: uppercase;
+        font-size: 1.875rem; }
+      .c-about_content .about-text p {
+        margin-top: 1.25rem; }
+      .c-about_content .about-text .about {
+        display: block;
+        font-weight: normal;
+        font-size: 1.5rem; }
+    .c-about_content .about-gallery {
+      width: 100%;
+      min-height: 12.5rem;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      flex-basis: 400px;
+      flex-grow: 1;
+      cursor: pointer; }
+      .c-about_content .about-gallery::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../assets/about-gallery.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        pointer-events: none;
+        background-size: cover;
+        filter: brightness(35%);
+        border-radius: 0.3125rem; }
+      .c-about_content .about-gallery:hover .galleryButton {
+        display: block;
+        transition: all 0.2s ease; }
+      .c-about_content .about-gallery:hover::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+        border: 2px solid #fff;
+        transition: all 0.2s ease; }
+      .c-about_content .about-gallery .galleryButton {
+        display: none;
+        position: relative;
+        margin: 0 1.5625rem 1.5625rem 0; }
 
 /*# sourceMappingURL=main.css.map */

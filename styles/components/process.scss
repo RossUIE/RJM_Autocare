@@ -1,0 +1,45 @@
+.c-process {
+    background-color: $background-white;
+    padding: rem(20 0);
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        @media only screen and (max-width: 768px) {
+            justify-content: center;
+        }
+
+        img {
+            min-width: rem(70);
+            height: rem(70);
+        }
+
+        &_item {
+            padding: rem(20 0);
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            flex-basis: 360px;
+
+            @media only screen and (max-width: 768px) {
+               flex-direction: column;
+               text-align: center;
+            }
+            
+
+            .item-content {
+                margin-left: rem(20);
+
+                @media only screen and (max-width: 768px) {
+                    margin-left: 0;
+                 }
+            }
+
+            h3 {
+                margin: rem(10 0);
+            }
+        }
+    }
+}

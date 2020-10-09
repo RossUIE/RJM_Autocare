@@ -1,6 +1,6 @@
 .c-main-banner {
     width: 100%;
-    min-height: rem(500);
+    min-height: rem(400);
     position: relative;
     display: flex;
     align-items: center;
@@ -23,13 +23,8 @@
         align-items: center;
         color: $white;
         text-transform: uppercase;
-        margin-left: rem(100);
         font-size: rem(20);
-        font-weight: 400;
-
-        @media only screen and (max-width: 800px) {
-            margin-left: rem(40);
-        }
+        padding-top: rem(20);
 
         h1 {
             font-weight: 400;
@@ -38,7 +33,7 @@
         .brand {
             display: block;
             color: $brand-red;
-            font-size: rem(36);
+            font-size: rem(48);
             font-weight: 600;
         }
     }

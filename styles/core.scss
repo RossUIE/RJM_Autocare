@@ -24,6 +24,22 @@ a {
     text-decoration: none;
 }
 
+button {
+    background-color: $brand-red;
+    border-radius: rem(5);
+    padding: rem(10 30);
+    cursor: pointer;
+    font: inherit;
+    color: $white;
+    border: none;
+    z-index: 9999999;
+
+    &:hover {
+        background: #952626;
+        transition: all 0.2s ease;
+    }
+}
+
 .c-backdrop {
     position: fixed;
     top: 70px;
@@ -41,8 +57,16 @@ a {
 }
 
 .container {
-    max-width: rem(1100);
+    max-width: rem(1400);
     width: 100%;
     margin: auto;
     padding: rem(0 20);
+}
+
+.divider {
+    max-width: rem(100);
+    width: 100%;
+    height: rem(5);
+    background-color: $brand-red;
+    margin-top: rem(3);
 }
