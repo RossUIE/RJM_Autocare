@@ -1,0 +1,22 @@
+{
+    "valeting": {
+        "small": 20,
+        "medium": 25,
+        "large": 30,
+        "SUV/Jeep": 35
+    },
+
+    "maintenance": {
+        "small": 20,
+        "medium": 25,
+        "large": 30,
+        "SUV/Jeep": 35
+    },
+
+    "detailing": {
+        "small": 20,
+        "medium": 25,
+        "large": 30,
+        "SUV/Jeep": 35
+    }
+}

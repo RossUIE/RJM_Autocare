@@ -15,12 +15,20 @@ html, body {
   scroll-behavior: smooth; }
 
 p, h1, h2, h3, h4, h5 {
-  margin: 0; }
+  margin: 0;
+  z-index: 999999; }
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.875rem; }
+
+h3 {
+  font-size: 1.25rem; }
 
 a {
   text-decoration: none; }
 
-button {
+.btn {
   background-color: #A30000;
   border-radius: 0.3125rem;
   padding: 0.625rem 1.875rem;
@@ -29,7 +37,7 @@ button {
   color: #fff;
   border: none;
   z-index: 9999999; }
-  button:hover {
+  .btn:hover {
     background: #952626;
     transition: all 0.2s ease; }
 
@@ -58,6 +66,11 @@ button {
   height: 0.3125rem;
   background-color: #A30000;
   margin-top: 0.1875rem; }
+
+.small-title {
+  display: block;
+  font-weight: normal;
+  font-size: 1.5rem; }
 
 .c-header {
   padding: 1.25rem 0;
@@ -243,15 +256,8 @@ button {
     .c-about_content .about-text {
       width: 50%;
       flex-grow: 1; }
-      .c-about_content .about-text h2 {
-        text-transform: uppercase;
-        font-size: 1.875rem; }
       .c-about_content .about-text p {
         margin-top: 1.25rem; }
-      .c-about_content .about-text .about {
-        display: block;
-        font-weight: normal;
-        font-size: 1.5rem; }
     .c-about_content .about-gallery {
       width: 100%;
       min-height: 12.5rem;
@@ -292,5 +298,91 @@ button {
         display: none;
         position: relative;
         margin: 0 1.5625rem 1.5625rem 0; }
+
+.c-packages {
+  padding-top: 3.125rem; }
+  .c-packages-title {
+    text-transform: uppercase;
+    margin-bottom: 6.25rem; }
+  .c-packages-content {
+    background-color: #E7E7E7;
+    width: 100%;
+    min-height: 10.625rem; }
+    .c-packages-content_items {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 0.9375rem; }
+      .c-packages-content_items .package-item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        border-radius: 0.3125rem;
+        color: #fff;
+        top: -3.125rem;
+        background-color: red;
+        flex-basis: 250px;
+        flex-grow: 1;
+        padding: 1.25rem; }
+        .c-packages-content_items .package-item p {
+          margin: 0.625rem 0;
+          font-size: 0.875rem; }
+        .c-packages-content_items .package-item .price {
+          font-size: 1.5rem;
+          font-weight: bold;
+          padding: 1.25rem 0 1.25rem 0.625rem; }
+        .c-packages-content_items .package-item button {
+          padding: 0.625rem 1.25rem;
+          max-width: 12.5rem; }
+        .c-packages-content_items .package-item.valeting::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("../../assets/packages/valeting.jpg");
+          background-repeat: no-repeat;
+          background-position: top;
+          pointer-events: none;
+          background-size: cover;
+          filter: brightness(35%);
+          border-radius: 0.3125rem;
+          z-index: 2; }
+        .c-packages-content_items .package-item.maintenance {
+          top: -4.6875rem; }
+          @media only screen and (max-width: 821px) {
+            .c-packages-content_items .package-item.maintenance {
+              top: -3.125rem; } }
+          .c-packages-content_items .package-item.maintenance::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("../../assets/packages/maintenance.jpg");
+            background-repeat: no-repeat;
+            background-position: top;
+            pointer-events: none;
+            background-size: cover;
+            filter: brightness(35%);
+            border-radius: 0.3125rem;
+            z-index: 2; }
+        .c-packages-content_items .package-item.detailing::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("../../assets/packages/detailing.jpg");
+          background-repeat: no-repeat;
+          background-position: top;
+          pointer-events: none;
+          background-size: cover;
+          filter: brightness(35%);
+          border-radius: 0.3125rem;
+          z-index: 2; }
 
 /*# sourceMappingURL=main.css.map */

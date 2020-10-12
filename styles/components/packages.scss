@@ -1,0 +1,107 @@
+.c-packages {
+    padding-top: rem(50);
+    &-title {
+        text-transform: uppercase;
+        margin-bottom: rem(100);
+    }
+
+    &-content {
+        background-color: $background-white;
+        width: 100%;
+        min-height: rem(170);
+
+        &_items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: rem(15);
+            
+            .package-item {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                border-radius: rem(5);
+                color: $white;
+                top: rem(-50);
+                background-color: red;
+                flex-basis: 250px;
+                flex-grow: 1;
+                padding: rem(20);
+
+                p {
+                   margin: rem(10 0);
+                   font-size: rem(14);
+                }
+
+                .price {
+                    font-size: rem(24);
+                    font-weight: bold;
+                    padding: rem(20 0 20 10);
+                }
+                
+
+                button {
+                   padding: rem(10 20);
+                   max-width: rem(200);
+                }
+                
+
+                &.valeting {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background-image: url("../../assets/packages/valeting.jpg");
+                        background-repeat: no-repeat;
+                        background-position: top;
+                        pointer-events: none;
+                        background-size: cover;
+                        filter: brightness(35%);
+                        border-radius: rem(5);
+                        z-index: 2;
+                    }
+                }
+
+                &.maintenance {
+                    top: rem(-75);
+                    @media only screen and (max-width: 821px) {
+                        top: rem(-50);
+                     }
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background-image: url("../../assets/packages/maintenance.jpg");
+                        background-repeat: no-repeat;
+                        background-position: top;
+                        pointer-events: none;
+                        background-size: cover;
+                        filter: brightness(35%);
+                        border-radius: rem(5);
+                        z-index: 2;
+                    }
+                }
+
+                &.detailing {
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background-image: url("../../assets/packages/detailing.jpg");
+                        background-repeat: no-repeat;
+                        background-position: top;
+                        pointer-events: none;
+                        background-size: cover;
+                        filter: brightness(35%);
+                        border-radius: rem(5);
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+    }
+    
+}

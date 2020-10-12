@@ -9,18 +9,9 @@
         .about-text {
             width:  50%;
             flex-grow: 1;
-            h2 {
-                text-transform: uppercase;
-                font-size: rem(30);
-            }
+        
             p {
                 margin-top: rem(20);
-            }
-
-            .about {
-                display: block;
-                font-weight: normal;
-                font-size: rem(24);
             }
         }
 
