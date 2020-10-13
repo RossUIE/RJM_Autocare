@@ -28,6 +28,14 @@
                 flex-grow: 1;
                 padding: rem(20);
 
+                &:hover {
+                    top: rem(-75);
+                    transition: all 0.2s ease-in-out;
+                    @media only screen and (max-width: 819px) {
+                        top: rem(-50);
+                    }
+                }
+
                 p {
                    margin: rem(10 0);
                    font-size: rem(14);
@@ -44,8 +52,26 @@
                    padding: rem(10 20);
                    max-width: rem(200);
                 }
-                
 
+                .star-container {
+                    position: absolute;
+                    z-index: 99999;
+                    top: rem(10);
+                    right: rem(10);
+                    width: rem(30);
+                    height: rem(30);
+                    border-radius: 50%;
+                    background-color: #3C3C3C;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: rem(20);
+                        height: rem(20);
+                    }
+                }
+                
                 &.valeting {
                     &::before {
                         content: "";
@@ -57,17 +83,13 @@
                         background-position: top;
                         pointer-events: none;
                         background-size: cover;
-                        filter: brightness(35%);
+                        filter: brightness(20%);
                         border-radius: rem(5);
                         z-index: 2;
                     }
                 }
 
                 &.maintenance {
-                    top: rem(-75);
-                    @media only screen and (max-width: 821px) {
-                        top: rem(-50);
-                     }
                     &::before {
                         content: "";
                         position: absolute;
@@ -78,7 +100,7 @@
                         background-position: top;
                         pointer-events: none;
                         background-size: cover;
-                        filter: brightness(35%);
+                        filter: brightness(20%);
                         border-radius: rem(5);
                         z-index: 2;
                     }
@@ -95,7 +117,7 @@
                         background-position: top;
                         pointer-events: none;
                         background-size: cover;
-                        filter: brightness(35%);
+                        filter: brightness(20%);
                         border-radius: rem(5);
                         z-index: 2;
                     }
@@ -103,5 +125,4 @@
             }
         }
     }
-    
 }

@@ -324,6 +324,12 @@ a {
         flex-basis: 250px;
         flex-grow: 1;
         padding: 1.25rem; }
+        .c-packages-content_items .package-item:hover {
+          top: -4.6875rem;
+          transition: all 0.2s ease-in-out; }
+          @media only screen and (max-width: 819px) {
+            .c-packages-content_items .package-item:hover {
+              top: -3.125rem; } }
         .c-packages-content_items .package-item p {
           margin: 0.625rem 0;
           font-size: 0.875rem; }
@@ -334,6 +340,21 @@ a {
         .c-packages-content_items .package-item button {
           padding: 0.625rem 1.25rem;
           max-width: 12.5rem; }
+        .c-packages-content_items .package-item .star-container {
+          position: absolute;
+          z-index: 99999;
+          top: 0.625rem;
+          right: 0.625rem;
+          width: 1.875rem;
+          height: 1.875rem;
+          border-radius: 50%;
+          background-color: #3C3C3C;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .c-packages-content_items .package-item .star-container img {
+            width: 1.25rem;
+            height: 1.25rem; }
         .c-packages-content_items .package-item.valeting::before {
           content: "";
           position: absolute;
@@ -346,29 +367,24 @@ a {
           background-position: top;
           pointer-events: none;
           background-size: cover;
-          filter: brightness(35%);
+          filter: brightness(20%);
           border-radius: 0.3125rem;
           z-index: 2; }
-        .c-packages-content_items .package-item.maintenance {
-          top: -4.6875rem; }
-          @media only screen and (max-width: 821px) {
-            .c-packages-content_items .package-item.maintenance {
-              top: -3.125rem; } }
-          .c-packages-content_items .package-item.maintenance::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("../../assets/packages/maintenance.jpg");
-            background-repeat: no-repeat;
-            background-position: top;
-            pointer-events: none;
-            background-size: cover;
-            filter: brightness(35%);
-            border-radius: 0.3125rem;
-            z-index: 2; }
+        .c-packages-content_items .package-item.maintenance::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("../../assets/packages/maintenance.jpg");
+          background-repeat: no-repeat;
+          background-position: top;
+          pointer-events: none;
+          background-size: cover;
+          filter: brightness(20%);
+          border-radius: 0.3125rem;
+          z-index: 2; }
         .c-packages-content_items .package-item.detailing::before {
           content: "";
           position: absolute;
@@ -381,7 +397,7 @@ a {
           background-position: top;
           pointer-events: none;
           background-size: cover;
-          filter: brightness(35%);
+          filter: brightness(20%);
           border-radius: 0.3125rem;
           z-index: 2; }
 
