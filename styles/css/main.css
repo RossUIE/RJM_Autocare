@@ -401,4 +401,57 @@ a {
           border-radius: 0.3125rem;
           z-index: 2; }
 
+.c-gallery {
+  margin: 3.125rem auto; }
+  .c-gallery-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem; }
+    .c-gallery-header .view-all {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; }
+      .c-gallery-header .view-all a {
+        color: #A30000; }
+        .c-gallery-header .view-all a:hover {
+          text-decoration: underline; }
+  .c-gallery-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2.5rem; }
+    .c-gallery-content .gallery-row {
+      display: flex;
+      justify-content: space-between;
+      width: 100%; }
+      @media only screen and (max-width: 650px) {
+        .c-gallery-content .gallery-row {
+          flex-direction: column;
+          gap: 20px; } }
+      .c-gallery-content .gallery-row .gallery-item {
+        height: 11.5625rem;
+        background: #A30000; }
+        @media only screen and (max-width: 650px) {
+          .c-gallery-content .gallery-row .gallery-item {
+            width: 100% !important; } }
+        .c-gallery-content .gallery-row .gallery-item.small {
+          width: 30%; }
+        .c-gallery-content .gallery-row .gallery-item.large {
+          width: 67%; }
+        .c-gallery-content .gallery-row .gallery-item.recent-detailing::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("../../assets/gallery/recent-detailing.png");
+          background-repeat: no-repeat;
+          background-position: top;
+          pointer-events: none;
+          background-size: cover;
+          filter: brightness(20%);
+          border-radius: 0.3125rem;
+          z-index: 2; }
+
 /*# sourceMappingURL=main.css.map */
