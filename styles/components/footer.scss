@@ -1,0 +1,40 @@
+.c-footer {
+    width: 100%;
+    background-color: #343434;
+    color: $white;
+
+    &-content {
+        display: flex;
+        margin: auto;
+
+        &_column {
+            min-width: rem(250);
+            padding: rem(20 0);
+            margin-right: rem(50);
+        }
+
+        .footer-row {
+            margin-top: rem(25);
+
+            ul {
+                list-style: none;
+                margin-left: 0; padding: 0;
+
+                li {
+                    margin-bottom: rem(20);
+                }
+            }
+        }
+    }
+
+    &-bottom {
+        width: 100%;
+        background-color: #1E1E1E;
+        font-size: rem(12);
+        &_content {
+            padding: rem(20);
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

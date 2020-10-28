@@ -37,8 +37,50 @@
              }
             
             .gallery-item {
-                height: rem(185);
+                height: rem(200);
                 background: $brand-red;
+                position: relative; 
+                border-radius: rem(5);
+                border-bottom: rem(20) solid $brand-red;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                padding: rem(20);
+                cursor: pointer;
+
+                h3 {
+                    color: $white;
+                    font-size: rem(24);
+                    font-weight: normal;
+                }
+
+                &.recent-detailing {
+                    background-image: url(../../assets/gallery/recent-detailing.png);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                &.side-view {
+                    background-image: url(../../assets/gallery/audi-side-view.png);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                &.side-view_2 {
+                    background-image: url(../../assets/gallery/audi-side-view_2.png);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                &.recent-valeting {
+                    background-image: url(../../assets/gallery/recent-valeting.png);
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
 
                 @media only screen and (max-width: 650px) {
                    width: 100% !important;
@@ -50,23 +92,6 @@
 
                 &.large {
                     width: 67%;
-                }
-
-                &.recent-detailing {
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: 0; left: 0;
-                        width: 100%; height: 100%;
-                        background-image: url("../../assets/gallery/recent-detailing.png");
-                        background-repeat: no-repeat;
-                        background-position: top;
-                        pointer-events: none;
-                        background-size: cover;
-                        filter: brightness(20%);
-                        border-radius: rem(5);
-                        z-index: 2;
-                    }
                 }
             }
         } 
