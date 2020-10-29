@@ -313,7 +313,7 @@ a {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      gap: 0.9375rem; }
+      gap: 1.5625rem; }
       .c-packages-content_items .package-item {
         display: flex;
         flex-direction: column;
@@ -341,6 +341,10 @@ a {
         .c-packages-content_items .package-item button {
           padding: 0.625rem 1.25rem;
           max-width: 12.5rem; }
+        .c-packages-content_items .package-item .c-best-seller {
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
         .c-packages-content_items .package-item .star-container {
           position: absolute;
           z-index: 99999;
@@ -532,5 +536,81 @@ a {
         width: 1.875rem;
         height: 1.875rem;
         margin-left: 0.625rem; }
+
+#ribbon-container {
+  position: relative;
+  right: -2.1875rem;
+  overflow: visible;
+  z-index: 9999998;
+  font-size: 12px;
+  max-width: 140px;
+  width: 100%; }
+  #ribbon-container a {
+    display: block;
+    padding: 12px;
+    position: relative;
+    background: #CE8D26;
+    overflow: visible;
+    color: #fff;
+    text-decoration: none;
+    margin-left: -1.25rem; }
+    #ribbon-container a::after {
+      /* this creates the "folded" part of our ribbon */
+      content: "";
+      height: 0;
+      width: 0;
+      display: block;
+      position: absolute;
+      bottom: -15px;
+      right: 0;
+      border-top: 15px solid #775013;
+      border-right: 15px solid transparent; }
+
+@-webkit-keyframes flow {
+  0% {
+    left: 0px;
+    opacity: 0; }
+  50% {
+    left: 50px;
+    opacity: 0.3; }
+  100% {
+    left: 90px;
+    opacity: 0; } }
+@keyframes flow {
+  0% {
+    left: 0px;
+    opacity: 0; }
+  50% {
+    left: 50px;
+    opacity: 0.3; }
+  100% {
+    left: 90px;
+    opacity: 0; } }
+.glow {
+  background: white;
+  width: 40px;
+  height: 100%;
+  z-index: 999;
+  position: absolute;
+  -webkit-animation: flow 1.5s linear infinite;
+  -moz-animation: flow 1.5s linear infinite;
+  -webkit-transform: skew(-20deg);
+  -moz-transform: skew(-20deg);
+  -o-transform: skew(-20deg);
+  background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, white 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(1%, rgba(255, 255, 255, 0)), color-stop(100%, white));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, white 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, white 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, white 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 1%, white 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+  /* IE6-9 */
+  border-left: 1px solid #fff; }
 
 /*# sourceMappingURL=main.css.map */
