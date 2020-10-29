@@ -14,6 +14,7 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     color: $bodyText;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 p,h1,h2,h3,h4,h5 {
@@ -42,7 +43,7 @@ a {
     font: inherit;
     color: $white;
     border: none;
-    z-index: 9999999;
+    z-index: 9999998;
 
     &:hover {
         background: #952626;

@@ -34,14 +34,14 @@
             @media only screen and (max-width: 650px) {
                 flex-direction: column;
                 gap: 20px;
-             }
+            }
             
             .gallery-item {
                 height: rem(200);
                 background: $brand-red;
                 position: relative; 
                 border-radius: rem(5);
-                border-bottom: rem(20) solid $brand-red;
+                border-bottom: rem(10) solid $brand-red;
                 display: flex;
                 justify-content: flex-end;
                 align-items: flex-end;
