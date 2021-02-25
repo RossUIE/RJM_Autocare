@@ -1,0 +1,101 @@
+.c-services {
+    margin-top: rem(100);
+
+    .service-title {
+        margin: rem(0 10 24 15);
+    }
+
+    .c-disclaimer {
+        margin: rem(0 10 24 15);
+    }
+    &_content {
+        max-width: rem(1400);
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &.detailing {
+            justify-content: center;
+        }
+    }
+    .c-service {
+        flex-grow: 1;
+        flex-basis: 210px;
+        padding: rem(20);
+        border: 1px solid $border-color;
+        position: relative;
+        margin: 0px 15px 30px 15px;
+        text-align: center;
+
+        @media only screen and (max-width: 659px) {
+            margin: rem(0 10 30 10);
+        }
+
+        &-price {
+            color: $brand-red;
+            text-align: center;
+            font-size: rem(50);
+            margin: rem(20 0);
+
+            .pound {
+                position: relative;
+                font-size: rem(24);
+                font-weight: 400;
+                top: rem(-28);
+                left: 10px;
+            }
+
+            .price {
+                font-weight: 300;
+                position: relative;
+                font-size: rem(64);
+            }
+        }
+
+        &-time {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid $border-color;
+            border-top: 1px solid $border-color;
+            padding: rem(15 0);
+
+            img {
+                width: rem(15);
+                margin-right: rem(10);
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            li {
+                position: relative;
+                padding-left: rem(30);
+                display: block;
+                margin-bottom: rem(10);
+                &::before {
+                    content: '';
+                    line-height: inherit;
+                    position: absolute;
+                    left: 0;
+                    top: rem(-6);
+                    width: 20px;
+                    height: 20px;
+                    text-align: center;
+                    background-image: url('../../assets/svg/check-circle-regular.svg');
+                    background-repeat: no-repeat;
+                    background-position: left center;
+                    margin: rem(5 10 0 0);
+                }
+            } 
+        }
+        &-list {
+            margin-top: rem(20);
+        }
+    }
+}

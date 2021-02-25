@@ -1,6 +1,6 @@
-.c-process {
+.c-car-selection {
     background-color: $background-white;
-    padding: rem(20 0);
+
     &-content {
         display: flex;
         justify-content: space-between;
@@ -12,23 +12,36 @@
         }
 
         svg {
-            min-width: rem(70);
-            height: rem(70);
+            min-width: rem(50);
+            height: rem(50);
+            fill: $brand-red;
         }
 
         &_item {
-            padding: rem(20 0);
+            padding: rem(30 0);
             display: flex;
             align-items: center;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
             flex-grow: 1;
-            flex-basis: 360px;
+            flex-basis: 340px;
+            cursor: pointer;
 
             @media only screen and (max-width: 768px) {
                flex-direction: column;
                text-align: center;
             }
-            
 
+            &:hover {
+                background: $brand-red;
+                color: $white;
+                transition: all 0.3s ease;
+                svg {
+                    fill:$white;
+                }
+            }
+            
             .item-content {
                 margin-left: rem(20);
 

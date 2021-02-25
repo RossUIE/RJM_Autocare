@@ -1,0 +1,50 @@
+.c-tooltip {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(20);
+    height: rem(20);
+    margin: auto;
+    &::after {
+        content: "\f059";
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1em;
+        line-height: 50px;
+        color: $bodyText;
+    }
+
+    &_content {
+        display: none;
+        background: $bodyText;
+        margin-top: 195px;
+        padding: 10px;
+        width: rem(150);
+        position: absolute;
+        z-index: 1000;
+        text-align: left;
+        font-size: rem(12);
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 0; 
+            height: 0; 
+            top: -10px;
+            right: rem(65);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid $bodyText;
+        }
+
+        ul {
+            margin-left: rem(0);
+            padding-left: rem(20);
+        }
+    }
+
+    &:hover .c-tooltip_content {
+        display: block;
+    }
+}
