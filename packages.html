@@ -42,15 +42,22 @@
         <!-- Start of welcome banner -->
         <section class="c-main-banner">
             <div class="c-main-banner_content container">
-                <h1>RJM Autocare
+                <h2>RJM Autocare
                     <span class="brand">Packages</span>
-                </h1>
+                </h2>
             </div>
         </section>
         <!-- end of welcome banner -->
 
         <!-- start of car selection -->
         <div class="c-car-selection">
+            <div class="c-car-selection-title container">
+                <h2>
+                    <span class="small-title">Select</span>
+                    Car Size
+                </h2>
+                <div class="divider"></div>
+            </div>
             <div class="c-car-selection-content container">
                 <div class="c-car-selection-content_item">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1333.34 471.88" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><path d="M1127.85 260.11c58.48 0 105.88 47.4 105.88 105.88s-47.4 105.88-105.88 105.88-105.88-47.4-105.88-105.88 47.4-105.88 105.88-105.88zm-878.24 55.33v38.13h38.13c-4.59-18.77-19.36-33.54-38.13-38.13zm38.13 62.97h-38.13v38.13c18.77-4.59 33.54-19.37 38.13-38.13zm-62.97 38.13v-38.13h-38.13c4.6 18.76 19.37 33.53 38.13 38.13zm-38.13-62.97h38.13v-38.13c-18.76 4.59-33.53 19.36-38.13 38.13zm953.62-38.13v38.13h38.13c-4.59-18.77-19.36-33.54-38.13-38.13zm38.13 62.97h-38.13v38.13c18.77-4.59 33.54-19.37 38.13-38.13zm-62.97 38.13v-38.13h-38.14c4.6 18.76 19.37 33.53 38.14 38.13zm-38.13-62.97h38.13v-38.13c-18.77 4.59-33.54 19.36-38.13 38.13zM534.81 138.81c-16.67-3.82-33.33-3.77-50-3.02C563.68 94.3 637.92 42.25 726.73 33c30.25-3.15 61.42-3.38 93.24-1.5l-21.1 139.69-251.97 9.44c2.28-6.67 3.61-10.19 4.03-16.86 1.18-18.8.97-21.03-16.12-24.95zM957.76 35.22l-99.3-1.24-27.31 135.3 261.84-10.62c26.87-1.09 31.62-12.96 15.31-35.59-7.43-10.31-15.63-20.55-25.07-30.63-38.43-41.05-67.28-55.1-125.46-57.22zM4.99 296h7.98c5.03-22.09 14.91-42.07 29.36-60.04 31.94-39.74 46.49-34.77 93.88-43.3l265.43-50.04C460.6 100.74 531.63 63.4 618.3 31.93 698.83 2.68 755.53-.17 841.62 0c49.25.09 99.19 3.07 149.87 9.14 25.71 1.61 50.9 5.11 75.67 10.15 29.63 6.02 58.67 14.23 87.28 24l106.34 61.4c31.38 18.11 38.06 39.28 42.11 73.87l14.96 127.87h15.49v70.6c-2.13 23.74-11.5 27.33-31.3 27.33h-25.69c9.99-223.46-304.32-261.64-297.52 17.72H377.16c40.47-192.6-153.75-259.42-249.13-149.36C99.02 306.2 89 352.08 91.58 406.17H22c-5.55-2.56-9.85-6.19-13.14-10.67C-2.52 379.94.02 333.25.78 306.17c.2-7.24-2.08-10.16 4.21-10.16zm232.21-35.89c58.48 0 105.88 47.4 105.88 105.88s-47.4 105.88-105.88 105.88-105.88-47.4-105.88-105.88 47.4-105.88 105.88-105.88z"/></svg>
@@ -136,19 +143,43 @@
 
         <!-- start of package listings -->
         <div class="c-services container">
-            <h3 class="service-title">Valeting and Maintenance Services</h3>
-            <div class="c-services_content">
-                <div class="c-service">
-                    <h2>MAINTENANCE WASH</h2>
-                    <div class="c-service-price">
-                        <span class="pound">£</span>
-                        <span class="price" id="maintenance">25</span>
+            <div class="servies-title">
+                <h2>
+                    <span class="small-title">Select</span>
+                    Package
+                </h2>
+                <div class="divider"></div>
+            </div>
+            <div class="c-services-content">
+                <div class="c-services-content_list">
+                    <div class="service-item maintenance">
+                        <h3>Maintenance Wash</h3>
                     </div>
-                    <div class="c-service-time">
-                        <img src="./assets/svg/clock-line.svg"/>
-                        <p>Approx 1-2 Hours</p>
+                    <div class="service-item exterior">
+                        <h3>Exterior Valet</h3>
                     </div>
-                    <div class="c-service-list">
+                    <div class="service-item interior">
+                        <h3>Interior Valet</h3>
+                    </div>
+                    <div class="service-item detailing">
+                        <h3>One Stage Enhancement</h3>
+                    </div>
+                    <div class="service-item detailing">
+                        <h3>Full Correction</h3>
+                    </div>
+                </div>
+                
+                <div class="c-services-content_info">
+                    <div class="c-price">
+                        <span class="pound-symbol">From</span>
+                        <h1 class="c-price-value">£20</h1>
+                    </div>
+
+                    <div class="c-title">
+                        <h2>Maintenance Wash</h2>
+                        <p>A detailed exterior wash to thoroughly clean the exterior of the vehicle. Maintanance washes are crucial for keeping your car looking its best.</p>
+                    </div>
+                    <div class="c-info">
                         <ul>
                             <li>Pre-rinse using pressure washer.</li>
                             <li>All wheels and tyres cleaned with a PH neutral wheel cleaner to remove brake dust
@@ -164,181 +195,12 @@
                             <li>Exterior windows and mirrors cleaned.</li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="c-service">
-                    <h2>INTERIOR VALET</h2>
-                    <div class="c-service-price">
-                        <span class="pound">£</span>
-                        <span class="price" id="interior">25</span>
-                    </div>
-                    <div class="c-service-time">
-                        <img src="./assets/svg/clock-line.svg"/>
-                        <p>Approx 1-2 Hours</p>
-                    </div>
-                    <div class="c-service-list">
-                        <ul>
-                            <li>All rubbish removed from vehicle.</li>
-                            <li>Thorough interior vacuum.</li>
-                            <li>All interior plastics safely cleaned.</li>
-                            <li>All interior surfaces dressed and 
-                                protected with the customers choice
-                                of finish (Natural, Satin or Gloss).</li>
-                            <li>Interior glass cleaned.</li>
-                            <li>Light clean of fabric, leather or 
-                                alcantara surfaces.</li>
-                            <li>Light clean of interior matts and 
-                                carpets.</li>
-                            <li>Final inspection to ensure high 
-                                standard.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="c-service">
-                    <h2>EXTERIOR VALET</h2>
-                    <div class="c-service-price">
-                        <span class="pound">£</span>
-                        <span class="price" id="exterior">60</span>
-                    </div>
-                    <div class="c-service-time">
-                        <img src="./assets/svg/clock-line.svg"/>
-                        <p>Approx 2-3 Hours</p>
-                    </div>
-                    <div class="c-service-list">
-                        <ul>
-                            <li>Pre rinse using pressure washer.</li>
-                            <li>All wheels and tyres cleaned with a PH neutral wheel cleaner to remove brake dust
-                                and other contamination spots.</li>
-                            <li>Citrus prewash degreaser applied to all panels to soften dirt.</li>
-                            <li>Power rinse loosened dirt.</li>
-                            <li>Pre-Wash safe snow foam applied using a foaming lance to safely remove dirt.</li>
-                            <li>Power rinse to remove foam and loosened dirt.</li>
-                            <li>2 bucket safe wash using a PH neutral high gloss shampoo and a high quality
-                                lambswool mitt for safe and effective cleaning.</li>
-                            <li>Safely Hand-dried using a high-quality drying towel.</li>
-                            <li>Tar spots removed using a chemical tar and glue remover.</li>
-                            <li>Iron contamination removed using a safe iron fallout remover.</li>
-                            <li>Paintwork clayed if required, to remove remaining contamination.</li>
-                            <li>All in one polish, glaze and wax applied to paint surfaces to restore gloss.</li>
-                            <li>Layer of gloss enhancement and sealant applied to all paint surfaces providing extra
-                                gloss and depth of shine.</li>
-                            <li>Tyre surfaces treated with satin or gloss finish.</li>
-                            <li>Exterior windows and mirrors cleaned.</li>
-                            <li>All exterior trim surfaces protected/dressed.</li>
-                            <li>Final inspection to ensure high standard.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="c-service">
-                    <h2>FULL VALET</h2>
-                    <div class="c-service-price">
-                        <span class="pound">£</span>
-                        <span class="price" id="full">75</span>
-                    </div>
                     <div class="c-service-time">
                         <img src="./assets/svg/clock-line.svg"/>
                         <p>Approx 4-6 Hours</p>
                     </div>
-                    <div class="c-service-list">
-                        <ul>
-                            <li>A Combination of both interior and exterior valeting packages.</li>
-                            <li>Ensures your car is spotless inside and out.</li>
-                        </ul>
-                    </div>
                 </div>
-
-            </div>
-        </div>
-
-        <div class="c-services container">
-            <h3 class="service-title">Detailing Services</h3>
-            <div class="c-services_content">
-                <div class="c-service">
-                    <h2>1 Stage Paint Enhancement</h2>
-                    <div class="c-service-price">
-                        <span class="pound">£</span>
-                        <span class="price" id="oneStage">120</span>
-                    </div>
-                    <div class="c-service-time">
-                        <img src="./assets/svg/clock-line.svg"/>
-                        <p>Approx 8 Hours</p>
-                    </div>
-                    <div class="c-service-list">
-                        <ul>
-                            <li>Pre rinse using pressure washer.</li>
-                            <li>All wheels and tyres cleaned with a PH neutral wheel cleaner to remove brake dust
-                                and other contamination spots.</li>
-                            <li>Citrus prewash degreaser applied to all panels to soften dirt.</li>
-                            <li>Power rinse loosened dirt.</li>
-                            <li>Pre-Wash safe snow foam applied using a foaming lance to safely remove dirt.</li>
-                            <li>Power rinse to remove foam and loosened dirt.</li>
-                            <li>2 bucket safe wash using a PH neutral high gloss shampoo and a high quality
-                                lambswool mitt for safe and effective cleaning.</li>
-                            <li>Safely Hand-dried using a high-quality drying towel.</li>
-                            <li>Tar spots removed using a chemical tar and glue remover.</li>
-                            <li>Iron contamination removed using a safe iron fallout remover.</li>
-                            <li>Paintwork clayed if required, to remove remaining contamination.</li>
-                            <li>Paintwork inspected for imperfections to ensure appropriate machine polishing is
-                                undertaken.</li>
-                            <li>All paintwork machine polished using a dual action machine to enhance its condition
-                                and remove minor scratches, swirling and marring. (50-60% correction rate)</li>
-                            <li>All panels treated with IPA wipe down to ensure best results.</li>
-                            <li>Paintwork treated with high quality sealant, giving up to 12 months protection.</li>
-                            <li>Paintwork treated with high quality carbonara wax, giving 3-4 months protection.</li>
-                            <li>Tyre surfaces treated with satin or gloss finish.</li>
-                            <li>Exterior windows and mirrors cleaned.</li>
-                            <li>All exterior trim surfaces protected/dressed.</li>
-                            <li>Final inspection to ensure high standard.</li>
-                        </ul>
-                    </div>
                 </div>
-
-                <div class="c-service ml-2">
-                    <h2>Full Correction Detail</h2>
-                    <div class="c-service-price">
-                        <span class="pound">£</span>
-                        <span class="price" id="fullCorrection">250</span>
-                    </div>
-                    <div class="c-service-time">
-                        <img src="./assets/svg/clock-line.svg"/>
-                        <p>Approx 2-3 Days</p>
-                    </div>
-                    <div class="c-service-list">
-                        <ul>
-                            <li>Pre rinse using pressure washer.</li>
-                            <li>All wheels and tyres cleaned with a PH neutral wheel cleaner to remove brake dust
-                                and other contamination spots.</li>
-                            <li>Citrus prewash degreaser applied to all panels to soften dirt.</li>
-                            <li>Power rinse loosened dirt.</li>
-                            <li>Pre-Wash safe snow foam applied using a foaming lance to safely remove dirt.</li>
-                            <li>Power rinse to remove foam and loosened dirt.</li>
-                            <li>2 bucket safe wash using a PH neutral high gloss shampoo and a high quality
-                                lambswool mitt for safe and effective cleaning.</li>
-                            <li>Safely Hand-dried using a high-quality drying towel.</li>
-                            <li>Tar spots removed using a chemical tar and glue remover.</li>
-                            <li>Iron contamination removed using a safe iron fallout remover.</li>
-                            <li>Paintwork clayed if required, to remove remaining contamination.</li>
-                            <li>Paintwork inspected for imperfections to ensure appropriate machine polishing is
-                                undertaken.</li>
-                            <li>All paintwork machine polished using a dual action machine to enhance its condition
-                                and remove minor scratches, swirling and marring. (80%+ correction rate)</li>
-                            <li>Multiple stage cutting process using a cutting compound and pad to remove heavy
-                                swirls and marring.</li>
-                            <li>All panels treated with IPA wipe down to ensure best results.</li>
-                            <li>Paintwork treated with high quality carbonara wax, giving 3-4 months protection.</li>
-                            <li>Tyre surfaces treated with satin or gloss finish.</li>
-                            <li>Exterior windows and mirrors cleaned.</li>
-                            <li>All exterior trim surfaces protected/dressed.</li>
-                            <li>Final inspection to ensure high standard.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="c-disclaimer">
-                *Please note; any of the above packages can go outside of the set time limits as mentioned above.
-                These prices are simply a guide and are dependent on the size and condition of the vehicle.
             </div>
         </div>
         <!-- end of package listings -->
