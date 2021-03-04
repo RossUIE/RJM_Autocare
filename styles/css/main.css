@@ -820,7 +820,8 @@ a {
       position: relative;
       color: #fff;
       z-index: 1;
-      padding: 1.5625rem; }
+      padding: 1.5625rem;
+      width: 100%; }
       .c-services-content_info::before {
         content: "";
         position: absolute;
