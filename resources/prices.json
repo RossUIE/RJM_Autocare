@@ -1,22 +1,36 @@
 {
-    "valeting": {
-        "small": 20,
-        "medium": 25,
-        "large": 30,
-        "SUV/Jeep": 35
-    },
-
     "maintenance": {
-        "small": 20,
-        "medium": 25,
-        "large": 30,
-        "SUV/Jeep": 35
+        "small": 15,
+        "medium": 20,
+        "large": 25,
+        "jeep": 25
     },
 
-    "detailing": {
-        "small": 20,
-        "medium": 25,
-        "large": 30,
-        "SUV/Jeep": 35
+    "interior": {
+        "small": 15,
+        "medium": 20,
+        "large": 25,
+        "jeep": 30
+    },
+
+    "exterior": {
+        "small": 30,
+        "medium": 35,
+        "large": 40,
+        "jeep": 50
+    },
+
+    "oneStage": {
+        "small": 60,
+        "medium": 70,
+        "large": 80,
+        "jeep": 90
+    },
+
+    "fullCorrection": {
+        "small": 120,
+        "medium": 140,
+        "large": 160,
+        "jeep": 180
     }
 }

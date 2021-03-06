@@ -653,16 +653,14 @@ a {
           flex-direction: column;
           text-align: center; } }
       .c-car-selection-content_item:hover {
-        background: #A30000;
-        color: #fff;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         transition: all 0.3s ease; }
-        .c-car-selection-content_item:hover svg {
-          fill: #fff; }
-      .c-car-selection-content_item .item-content {
-        margin-left: 1.25rem; }
-        @media only screen and (max-width: 768px) {
-          .c-car-selection-content_item .item-content {
-            margin-left: 0; } }
+      .c-car-selection-content_item.active {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        transition: all 0.3s ease; }
+      @media only screen and (max-width: 768px) {
+        .c-car-selection-content_item .item-content {
+          margin-left: 0; } }
       .c-car-selection-content_item h3 {
         margin: 0.625rem 0; }
 
@@ -837,6 +835,8 @@ a {
         filter: brightness(20%);
         border-radius: 0.3125rem;
         z-index: 2; }
+      .c-services-content_info .c-list-content {
+        z-index: 3; }
       .c-services-content_info .c-title {
         z-index: 3; }
       .c-services-content_info .c-price {

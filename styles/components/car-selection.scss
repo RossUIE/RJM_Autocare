@@ -49,16 +49,16 @@
             }
 
             &:hover {
-                background: $brand-red;
-                color: $white;
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
                 transition: all 0.3s ease;
-                svg {
-                    fill:$white;
-                }
+            }
+
+            &.active {
+                box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+                transition: all 0.3s ease;
             }
             
             .item-content {
-                margin-left: rem(20);
 
                 @media only screen and (max-width: 768px) {
                     margin-left: 0;
