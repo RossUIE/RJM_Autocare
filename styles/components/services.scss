@@ -1,5 +1,9 @@
 .c-services {
     margin-top: rem(30);
+
+    .c-disclaimer {
+        margin-bottom: rem(30);
+    }
     &-content {
         width: 100%;
         margin: auto;
@@ -33,6 +37,13 @@
                 cursor: pointer;
                 min-height: rem(150);
                 flex-basis: rem(210);
+
+                &.active {
+                    &::before {
+                        filter: brightness(60%) !important;
+                        z-index: 3;
+                    }
+                }
 
                 h3 {
                     z-index: 3;

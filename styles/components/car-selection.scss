@@ -19,6 +19,7 @@
     &-content {
         display: flex;
         justify-content: space-between;
+        gap: rem(20);
         align-items: center;
         margin: 0 auto;
         flex-wrap: wrap;
@@ -40,7 +41,7 @@
             text-align: center;
             justify-content: center;
             flex-grow: 1;
-            flex-basis: 340px;
+            flex-basis: 289px;
             cursor: pointer;
 
             @media only screen and (max-width: 768px) {

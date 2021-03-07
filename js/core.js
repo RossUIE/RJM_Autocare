@@ -1,9 +1,12 @@
 
 	let carType = "small";
 	let serviceType = "maintenance";
-
 	let serviceData;
-	
+
+	window.onload = function() {
+		getJSONData();
+	}
+
 	const navSlide = () => {
 		const burger = document.querySelector('.burger');
 		const nav = document.querySelector('.c-header_links');
@@ -82,12 +85,11 @@
 	
 		for (var i = 0; i < btns.length; i++) {
 			btns[i].addEventListener("click", function(event) {
-				handlePriceSelection()
-				var current = document.getElementsByClassName("active");
+				var current = btnContainer.getElementsByClassName("active");
 				current[0].className = current[0].className.replace(" active", "");
 				this.className += " active";
 				getCarType(this.id);
-				
+				handlePriceSelection()
 			});
 		}
 	}
@@ -100,25 +102,28 @@
 		return serviceType = service;
 	}
 
-	
-
-
 	handleServiceType = (event) => {
 		var btnContainer = document.getElementById("c-services-content_list");
 		var btns = btnContainer.getElementsByClassName("service-item");
 		
 		for (var i = 0; i < btns.length; i++) {
 			btns[i].addEventListener("click", function(event) {
+				var current = btnContainer.getElementsByClassName("active");
+				current[0].className = current[0].className.replace(" active", "");
+				this.className += " active";
 			  	getServiceType(this.id);
-				  console.log(serviceType)
 			  	handlePriceSelection(event);
 			});
 		}
 	}
 
+	setData = (data) => {
+		serviceData = data
+	}
+
 	getJSONData = () => {
 		$.getJSON("../resources/prices.json", function(data){
-			serviceData = data
+			setData(data)
         }).fail(function(){
             console.log("An error has occurred.");
         });
@@ -216,13 +221,7 @@
 		}
 		//end of start of one-stage
 
-
-
 		let price = document.getElementById("price").innerHTML = servicePrice;
-	}
-
-	window.onload = function() {
-		getJSONData();
 	}
 
 	const app = () => {
