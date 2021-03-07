@@ -108,6 +108,9 @@ a {
         padding-bottom: 8px; }
         .c-header_links ul li.active {
           color: #A30000; }
+          @media only screen and (max-width: 659px) {
+            .c-header_links ul li.active {
+              color: white; } }
         .c-header_links ul li:before, .c-header_links ul li:after {
           content: '';
           position: absolute;

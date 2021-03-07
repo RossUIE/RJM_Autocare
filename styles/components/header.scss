@@ -45,7 +45,10 @@
                 padding-bottom: 8px;
 
                 &.active {
-                   color: $brand-red
+                   color: $brand-red;
+                   @media only screen and (max-width: 659px) {
+                       color: white;
+                   }
                 }
 
                     &:before,
