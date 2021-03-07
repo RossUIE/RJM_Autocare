@@ -125,7 +125,7 @@
 	getJSONData = () => {
 		$.ajax({ 
 			type: 'GET', 
-			url: '../resources/prices.json', 
+			url: 'resources/prices.json', 
 			data: { get_param: 'value' }, 
 			dataType: 'json',
 			success: function (data) { 
