@@ -1,4 +1,5 @@
 
+	$(document).ready(function () {
 	let carType = "small";
 	let serviceType = "maintenance";
 	let serviceData;
@@ -122,11 +123,19 @@
 	}
 
 	getJSONData = () => {
-		$.getJSON("../resources/prices.json", function(data){
-			setData(data)
-        }).fail(function(){
-            console.log("An error has occurred.");
-        });
+		$.ajax({ 
+			type: 'GET', 
+			url: '../resources/prices.json', 
+			data: { get_param: 'value' }, 
+			dataType: 'json',
+			success: function (data) { 
+				console.log('yeeo')
+				setData(data)
+			},
+            error: function (result) {
+                console.log('Unable to get pricing data')
+            }
+		});
 	}
 
 	handlePriceSelection = () => {
@@ -233,3 +242,5 @@
 	}
 
 	app();
+
+})
