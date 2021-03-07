@@ -64,15 +64,15 @@
 			item.addEventListener('click', event => {
 				const service = event.target.innerText;
 				if(service === "Maintenance Wash") {
-					$(".c-list-content").load('../resources/ServicesContent/maintenance.html');
+					$(".c-list-content").load('/resources/ServicesContent/maintenance.html');
 				} else if(service === "Exterior Valet") {
-					$(".c-list-content").load('../resources/ServicesContent/exterior-valeting.html');
+					$(".c-list-content").load('/resources/ServicesContent/exterior-valeting.html');
 				} else if(service === "Interior Valet") {
-					$(".c-list-content").load('../resources/ServicesContent/interior-valeting.html');
+					$(".c-list-content").load('/resources/ServicesContent/interior-valeting.html');
 				} else if(service === "One Stage Enhancement") {
-					$(".c-list-content").load('../resources/ServicesContent/one-stage.html');
+					$(".c-list-content").load('/resources/ServicesContent/one-stage.html');
 				} else {
-					$(".c-list-content").load('../resources/ServicesContent/full-correction.html');
+					$(".c-list-content").load('/resources/ServicesContent/full-correction.html');
 				}
 			});
 		})
@@ -125,7 +125,7 @@
 	getJSONData = () => {
 		$.ajax({ 
 			type: 'GET', 
-			url: 'resources/prices.json', 
+			url: '/resources/prices.json', 
 			data: { get_param: 'value' }, 
 			dataType: 'json',
 			success: function (data) { 
