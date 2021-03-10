@@ -1,0 +1,32 @@
+.c-main-gallery {
+    &-content {
+        margin: rem(100 0);
+        
+        &_images {
+            display: flex;
+            justify-content: space-between;
+            gap: rem(20);
+            align-items: center;
+            margin: 0 auto;
+            flex-wrap: wrap;
+
+            a {
+                display: flex;
+                flex: auto;
+            }
+
+            .gallery-item {
+                display: flex;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                flex-grow: 1;
+                flex-basis: rem(289);
+                cursor: pointer;
+                max-height: rem(300);
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
