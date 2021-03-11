@@ -1,15 +1,4 @@
 $(document).ready(function() {
-$.ajax({
-    url : "assets/gallery",
-    success: function (data) {
-        $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                $(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
-            } 
-        });
-    }
-});
-
 	$('.c-main-gallery-content_images').magnificPopup({
 		delegate: 'a',
 		type: 'image',
@@ -27,4 +16,96 @@ $.ajax({
 			}
 		}
 	});
+
+	const handleGalleryButtonSelection = () => {
+		var btnContainer = document.getElementById("c-main-gallery-content_options");
+		var btns = btnContainer.getElementsByClassName("c-gallery-option");
+		
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].addEventListener("click", function(event) {
+				var current = btnContainer.getElementsByClassName("active");
+				current[0].className = current[0].className.replace(" active", "");
+				this.className += " active";
+			});
+		}
+	}
+
+	const getAllInteriorPhotos = () => {
+		$.ajax({
+			url : "assets/gallery/interior",
+			success: function (data) {
+				$(data).find("a").attr("href", function (i, val) {
+					if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
+					} 
+				});
+			}
+		});
+	}
+
+	const getAllExteriorPhotos = () => {
+		$.ajax({
+			url : "assets/gallery/exterior",
+			success: function (data) {
+				$(data).find("a").attr("href", function (i, val) {
+					if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
+					} 
+				});
+			}
+		});
+	}
+
+	const getAllPhotos = () => {
+		$.ajax({
+			url : "assets/gallery/exterior",
+			success: function (data) {
+				$(data).find("a").attr("href", function (i, val) {
+					if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
+					} 
+				});
+			}
+		});
+
+		$.ajax({
+			url : "assets/gallery/interior",
+			success: function (data) {
+				$(data).find("a").attr("href", function (i, val) {
+					if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
+					} 
+				});
+			}
+		});
+	}
+
+	const handleGallerySelection = () => {
+		const galleryOption = document.querySelectorAll('.c-gallery-option').forEach(item => {
+			item.addEventListener('click', event => {
+				let option = event.target.innerText;
+				if(option === "Interior") {
+					$(".c-main-gallery-content_images").empty();
+					getAllInteriorPhotos();
+				} else if(option === "Exterior") {
+					$(".c-main-gallery-content_images").empty();
+					getAllExteriorPhotos();
+				} else {
+					$(".c-main-gallery-content_images").empty();
+					getAllPhotos();
+				}
+			})
+		})
+	}
+
+	window.onload = () => {
+		getAllPhotos();
+	}
+
+	const galleryApp = () => {
+		handleGalleryButtonSelection();
+		handleGallerySelection();
+	}
+
+	galleryApp();
 });

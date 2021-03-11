@@ -1,6 +1,34 @@
 .c-main-gallery {
     &-content {
         margin: rem(100 0);
+
+        &_options {
+            display: flex;
+            justify-content: center;
+            padding: rem(20);
+            gap: rem(20);
+            margin-bottom: rem(50);
+
+            .c-gallery-option {
+                width: rem(200);
+                background: transparent;
+                border: none;
+                padding: rem(10);
+                font-size: inherit;
+                font: inherit;
+                cursor: pointer;
+                outline: none;
+                transition: all 0.2s ease-in-out;
+
+                &.active {
+                    border-bottom: rem(1) solid $brand-red;
+                }
+
+                &:hover {
+                    background: $background-white;
+                }
+            }
+        }
         
         &_images {
             display: flex;
@@ -25,7 +53,7 @@
                 cursor: pointer;
                 max-height: rem(300);
                 max-width: 100%;
-                object-fit: cover;
+                object-fit: cover; 
             }
         }
     }

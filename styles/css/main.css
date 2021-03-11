@@ -915,6 +915,26 @@ a {
 
 .c-main-gallery-content {
   margin: 6.25rem 0; }
+  .c-main-gallery-content_options {
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem;
+    gap: 1.25rem;
+    margin-bottom: 3.125rem; }
+    .c-main-gallery-content_options .c-gallery-option {
+      width: 12.5rem;
+      background: transparent;
+      border: none;
+      padding: 0.625rem;
+      font-size: inherit;
+      font: inherit;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.2s ease-in-out; }
+      .c-main-gallery-content_options .c-gallery-option.active {
+        border-bottom: 0.0625rem solid #A30000; }
+      .c-main-gallery-content_options .c-gallery-option:hover {
+        background: #E7E7E7; }
   .c-main-gallery-content_images {
     display: flex;
     justify-content: space-between;
