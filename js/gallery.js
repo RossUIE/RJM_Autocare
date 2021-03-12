@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	let interior = false;
+	let exterior = false;
 	$('.c-main-gallery-content_images').magnificPopup({
 		delegate: 'a',
 		type: 'image',
@@ -61,29 +63,39 @@ $(document).ready(function() {
 	}
 
 	const getAllPhotos = () => {
-		$('.loader').show();
+		let interior = false;
+		let exterior = false;
 		$.ajax({
 			url : "assets/gallery/exterior",
+			async: false,
 			success: function (data) {
 				$(data).find("a").attr("href", function (i, val) {
 					if( val.match(/\.(jpe?g|png|gif)$/) ) { 
 						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
 					} 
 				});
+				exterior = true;
 			}
 		});
 
 		$.ajax({
 			url : "assets/gallery/interior",
+			async: false,
 			success: function (data) {
 				$(data).find("a").attr("href", function (i, val) {
 					if( val.match(/\.(jpe?g|png|gif)$/) ) { 
 						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
 					} 
 				});
+				interior = true;
 			}
 		});
-		$('.loader').hide();
+		
+		if(interior && exterior) {
+			$('.loader').hide();
+		} else {
+			$('.loader').show();
+		}
 	}
 
 	const handleGallerySelection = () => {
