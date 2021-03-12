@@ -530,16 +530,16 @@ textarea {
       margin-top: 1.5625rem; }
       .c-footer-content .footer-row p {
         margin-top: 0.3125rem; }
+      .c-footer-content .footer-row a {
+        color: #fff; }
+        .c-footer-content .footer-row a:hover {
+          color: #A30000; }
       .c-footer-content .footer-row ul {
         list-style: none;
         margin-left: 0;
         padding: 0; }
         .c-footer-content .footer-row ul li {
           margin-bottom: 1.25rem; }
-          .c-footer-content .footer-row ul li a {
-            color: #fff; }
-            .c-footer-content .footer-row ul li a:hover {
-              color: #A30000; }
   .c-footer-logo {
     background-image: url(../../assets/logo/logo_grayscale.svg);
     background-position: center;
