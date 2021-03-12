@@ -64,7 +64,27 @@ a {
     @media only screen and (max-width: 659px) {
         display: none;
     }
+}
 
+input, textarea {
+    border: none;
+    outline: none;
+    font-size: inherit;
+    font: inherit;
+}
+
+label {
+    color: $placeholder;
+    font-size: rem(14);
+}
+
+textarea {
+    resize: none;
+    font: inherit;
+}
+
+.error {
+    border-color: $errorRed !important;
 }
 
 .container {
