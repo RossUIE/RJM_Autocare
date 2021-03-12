@@ -31,6 +31,7 @@ $(document).ready(function() {
 	}
 
 	const getAllInteriorPhotos = () => {
+		$('.loader').show();
 		$.ajax({
 			url : "assets/gallery/interior",
 			success: function (data) {
@@ -39,11 +40,13 @@ $(document).ready(function() {
 						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
 					} 
 				});
+				$('.loader').hide();
 			}
 		});
 	}
 
 	const getAllExteriorPhotos = () => {
+		$('.loader').show();
 		$.ajax({
 			url : "assets/gallery/exterior",
 			success: function (data) {
@@ -52,11 +55,13 @@ $(document).ready(function() {
 						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
 					} 
 				});
+				$('.loader').hide();
 			}
 		});
 	}
 
 	const getAllPhotos = () => {
+		$('.loader').show();
 		$.ajax({
 			url : "assets/gallery/exterior",
 			success: function (data) {
@@ -78,6 +83,7 @@ $(document).ready(function() {
 				});
 			}
 		});
+		$('.loader').hide();
 	}
 
 	const handleGallerySelection = () => {
