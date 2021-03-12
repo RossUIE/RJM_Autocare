@@ -65,6 +65,7 @@ $(document).ready(function() {
 	const getAllPhotos = () => {
 		let interior = false;
 		let exterior = false;
+		$('.loader').show();
 		$.ajax({
 			url : "assets/gallery/exterior",
 			async: false,
@@ -93,8 +94,6 @@ $(document).ready(function() {
 		
 		if(interior && exterior) {
 			$('.loader').hide();
-		} else {
-			$('.loader').show();
 		}
 	}
 
