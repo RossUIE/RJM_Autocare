@@ -26,6 +26,7 @@
 
                 &:hover {
                     background: $background-white;
+                    border-bottom: rem(1) solid $brand-red;
                 }
             }
         }

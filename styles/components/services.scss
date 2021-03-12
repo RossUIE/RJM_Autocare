@@ -50,96 +50,6 @@
                     color: $white;
                     position: inherit;
                 }
-
-                &.interior {
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 0; left: 0;
-                        width: 100%; height: 100%;
-                        background-image: url("../../assets/packages/valeting.jpg");
-                        background-repeat: no-repeat;
-                        background-position: top;
-                        pointer-events: none;
-                        background-size: cover;
-                        filter: brightness(20%);
-                        border-radius: rem(5);
-                        z-index: 2;
-                    }
-
-                    &:hover {
-                        &::before { 
-                            filter: brightness(50%);
-                        }
-                    }
-                }
-
-                &.exterior {
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 0; left: 0;
-                        width: 100%; height: 100%;
-                        background-image: url("../../assets/banner.png");
-                        background-repeat: no-repeat;
-                        background-position: top;
-                        pointer-events: none;
-                        background-size: cover;
-                        filter: brightness(20%);
-                        border-radius: rem(5);
-                        z-index: 2;
-                    }
-                    &:hover {
-                        &::before { 
-                            filter: brightness(50%);
-                        }
-                    }
-                }
-
-
-                &.maintenance {
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 0; left: 0;
-                        width: 100%; height: 100%;
-                        background-image: url("../../assets/packages/maintenance.jpg");
-                        background-repeat: no-repeat;
-                        background-position: top;
-                        pointer-events: none;
-                        background-size: cover;
-                        filter: brightness(20%);
-                        border-radius: rem(5);
-                        z-index: 2;
-                    }
-                    &:hover {
-                        &::before { 
-                            filter: brightness(50%);
-                        }
-                    }
-                }
-
-                &.detailing {
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 0; left: 0;
-                        width: 100%; height: 100%;
-                        background-image: url("../../assets/packages/detailing.jpg");
-                        background-repeat: no-repeat;
-                        background-position: top;
-                        pointer-events: none;
-                        background-size: cover;
-                        filter: brightness(20%);
-                        border-radius: rem(5);
-                        z-index: 2;
-                    }
-                    &:hover {
-                        &::before { 
-                            filter: brightness(50%);
-                        }
-                    }
-                }
             }
         }
 
@@ -158,7 +68,7 @@
                 position: absolute;
                 top: 0; left: 0;
                 width: 100%; height: 100%;
-                background-image: url("../../assets/packages/detailing.jpg");
+                background-image: url("../../assets/packages/maintenance.jpg");
                 background-repeat: no-repeat;
                 background-position: top;
                 pointer-events: none;
@@ -237,5 +147,75 @@
             }
             
         }
+    }
+}
+
+
+.interior {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url("../../assets/packages/valeting.jpg");
+        background-repeat: no-repeat;
+        background-position: top;
+        pointer-events: none;
+        background-size: cover;
+        filter: brightness(20%);
+        border-radius: rem(5);
+        z-index: 2;
+    }
+}
+
+.exterior {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url("../../assets/banner.png");
+        background-repeat: no-repeat;
+        background-position: top;
+        pointer-events: none;
+        background-size: cover;
+        filter: brightness(20%);
+        border-radius: rem(5);
+        z-index: 2;
+    }
+}
+
+
+.maintenance {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url("../../assets/packages/maintenance.jpg");
+        background-repeat: no-repeat;
+        background-position: top;
+        pointer-events: none;
+        background-size: cover;
+        filter: brightness(20%);
+        border-radius: rem(5);
+        z-index: 2;
+    }
+}
+
+.detailing {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url("../../assets/packages/detailing.jpg");
+        background-repeat: no-repeat;
+        background-position: top;
+        pointer-events: none;
+        background-size: cover;
+        filter: brightness(20%);
+        border-radius: rem(5);
+        z-index: 2;
     }
 }

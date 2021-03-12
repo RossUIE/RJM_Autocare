@@ -8,18 +8,24 @@ window.onload = function() {
 }
 
 const renderServiceContent = () => {
+    const mainContentContainer = document.getElementById("c-services-content_info");
     const services = document.querySelectorAll('.service-item').forEach(item => {
         item.addEventListener('click', event => {
             const service = event.target.innerText;
             if(service === "Maintenance Wash") {
+                $("#c-services-content_info").addClass("maintenance")
                 $(".c-list-content").load('../resources/ServicesContent/maintenance.html');
             } else if(service === "Exterior Valet") {
+                $("#c-services-content_info").addClass("exterior")
                 $(".c-list-content").load('../resources/ServicesContent/exterior-valeting.html');
             } else if(service === "Interior Valet") {
+                $("#c-services-content_info").addClass("interior")
                 $(".c-list-content").load('../resources/ServicesContent/interior-valeting.html');
             } else if(service === "One Stage Enhancement") {
                 $(".c-list-content").load('../resources/ServicesContent/one-stage.html');
+                $("#c-services-content_info").addClass("detailing")
             } else {
+                $("#c-services-content_info").addClass("detailing")
                 $(".c-list-content").load('../resources/ServicesContent/full-correction.html');
             }
         });
@@ -41,6 +47,34 @@ const handleCarSelection = () => {
     }
 }
 
+const handleBackgroundImage = (event) => {
+    const mainContentContainer = document.getElementById("c-services-content_info");
+    const image = event.target.id;
+    if(image === "maintenance") {
+        $(mainContentContainer).removeClass("interior");
+        $(mainContentContainer).removeClass("exterior");
+        $(mainContentContainer).removeClass("detailing");
+        $(mainContentContainer).addClass("maintenance");
+    } 
+    if(image === "exterior") {
+        $(mainContentContainer).removeClass("interior");
+        $(mainContentContainer).removeClass("maintenance");
+        $(mainContentContainer).removeClass("detailing");
+        $(mainContentContainer).addClass("exterior");
+    }
+    if(image === "interior") {
+        $(mainContentContainer).removeClass("detailing");
+        $(mainContentContainer).removeClass("maintenance");
+        $(mainContentContainer).removeClass("exterior");
+        $(mainContentContainer).addClass("interior")
+    } 
+    if(image === "one-stage" || image === "full-correction") {
+        $(mainContentContainer).removeClass("maintenance");
+        $(mainContentContainer).removeClass("interior");
+        $(mainContentContainer).removeClass("exterior");
+        $(mainContentContainer).addClass("detailing");
+    }
+}
 getCarType = (car) => {
     return carType = car;
 }
@@ -60,6 +94,7 @@ handleServiceType = (event) => {
             this.className += " active";
               getServiceType(this.id);
               handlePriceSelection(event);
+              handleBackgroundImage(event)
         });
     }
 }
