@@ -19,6 +19,16 @@ $(document).ready(function() {
 		}
 	});
 
+	const interiorImagesLoaded = () => {
+		console.log('yhuihaw')
+		interior = true;
+	}
+
+	const exteriorImagesLoaded = () => {
+		console.log('yhuihaw')
+		exterior = true;
+	}
+
 	const handleGalleryButtonSelection = () => {
 		var btnContainer = document.getElementById("c-main-gallery-content_options");
 		var btns = btnContainer.getElementsByClassName("c-gallery-option");
@@ -63,38 +73,36 @@ $(document).ready(function() {
 	}
 
 	const getAllPhotos = () => {
-		let interior = false;
-		let exterior = false;
 		$('.loader').show();
 		$.ajax({
 			url : "assets/gallery/exterior",
-			async: false,
 			success: function (data) {
 				$(data).find("a").attr("href", function (i, val) {
 					if( val.match(/\.(jpe?g|png|gif)$/) ) { 
 						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
 					} 
 				});
-				exterior = true;
+				exteriorImagesLoaded();
+				if(interior && exterior) {
+					$('.loader').hide();
+				}
 			}
 		});
 
 		$.ajax({
 			url : "assets/gallery/interior",
-			async: false,
 			success: function (data) {
 				$(data).find("a").attr("href", function (i, val) {
 					if( val.match(/\.(jpe?g|png|gif)$/) ) { 
 						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
 					} 
 				});
-				interior = true;
+				interiorImagesLoaded();
+				if(interior && exterior) {
+					$('.loader').hide();
+				}
 			}
 		});
-		
-		if(interior && exterior) {
-			$('.loader').hide();
-		}
 	}
 
 	const handleGallerySelection = () => {
