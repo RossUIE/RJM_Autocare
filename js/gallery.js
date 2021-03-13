@@ -1,6 +1,5 @@
 $(document).ready(function() {
-	let interior = false;
-	let exterior = false;
+	
 	$('.c-main-gallery-content_images').magnificPopup({
 		delegate: 'a',
 		type: 'image',
@@ -18,17 +17,6 @@ $(document).ready(function() {
 			}
 		}
 	});
-
-	const interiorImagesLoaded = () => {
-		console.log('yhuihaw')
-		interior = true;
-	}
-
-	const exteriorImagesLoaded = () => {
-		console.log('yhuihaw')
-		exterior = true;
-	}
-
 	const handleGalleryButtonSelection = () => {
 		var btnContainer = document.getElementById("c-main-gallery-content_options");
 		var btns = btnContainer.getElementsByClassName("c-gallery-option");
@@ -44,22 +32,24 @@ $(document).ready(function() {
 
 	const getAllInteriorPhotos = () => {
 		$('.loader').show();
-		$.ajax({
+		return $.ajax({
 			url : "assets/gallery/interior",
 			success: function (data) {
 				$(data).find("a").attr("href", function (i, val) {
 					if( val.match(/\.(jpe?g|png|gif)$/) ) { 
 						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
 					} 
-				});
+				})
+			},
+			complete: function() {
 				$('.loader').hide();
 			}
-		});
+		})
 	}
 
 	const getAllExteriorPhotos = () => {
 		$('.loader').show();
-		$.ajax({
+		return $.ajax({
 			url : "assets/gallery/exterior",
 			success: function (data) {
 				$(data).find("a").attr("href", function (i, val) {
@@ -67,43 +57,21 @@ $(document).ready(function() {
 						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
 					} 
 				});
+				
+			},
+			complete: function() {
 				$('.loader').hide();
 			}
-		});
+		})
 	}
 
 	const getAllPhotos = () => {
-		$('.loader').show();
-		$.ajax({
-			url : "assets/gallery/exterior",
-			success: function (data) {
-				$(data).find("a").attr("href", function (i, val) {
-					if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
-					} 
-				});
-				exteriorImagesLoaded();
-				if(interior && exterior) {
-					$('.loader').hide();
-				}
-			}
-		});
-
-		$.ajax({
-			url : "assets/gallery/interior",
-			success: function (data) {
-				$(data).find("a").attr("href", function (i, val) {
-					if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
-					} 
-				});
-				interiorImagesLoaded();
-				if(interior && exterior) {
-					$('.loader').hide();
-				}
-			}
+		return $.when(getAllExteriorPhotos(), getAllInteriorPhotos()).done(function(){
+			$('.loader').hide();
 		});
 	}
+
+	window.addEventListener('load', getAllPhotos())
 
 	const handleGallerySelection = () => {
 		const galleryOption = document.querySelectorAll('.c-gallery-option').forEach(item => {
@@ -121,10 +89,6 @@ $(document).ready(function() {
 				}
 			})
 		})
-	}
-
-	window.onload = () => {
-		getAllPhotos();
 	}
 
 	const galleryApp = () => {
