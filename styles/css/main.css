@@ -109,7 +109,7 @@ textarea {
     background-repeat: no-repeat;
     position: relative;
     min-height: 100%;
-    width: 100%;
+    width: 5rem;
     height: 60px; }
   .c-header_links {
     display: flex;
@@ -475,22 +475,22 @@ textarea {
           font-size: 1.5rem;
           font-weight: normal; }
         .c-gallery-content .gallery-row .gallery-item.recent-detailing {
-          background-image: url(../../assets/gallery/recent-detailing.png);
+          background-image: url(../../assets/gallery/recent-detailing.jpg);
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat; }
         .c-gallery-content .gallery-row .gallery-item.side-view {
-          background-image: url(../../assets/gallery/audi-side-view.png);
+          background-image: url(../../assets/gallery/audi-side-view.jpg);
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat; }
         .c-gallery-content .gallery-row .gallery-item.side-view_2 {
-          background-image: url(../../assets/gallery/audi-side-view_2.png);
+          background-image: url(../../assets/gallery/audi-side-view_2.jpg);
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat; }
         .c-gallery-content .gallery-row .gallery-item.recent-valeting {
-          background-image: url(../../assets/gallery/recent-valeting.png);
+          background-image: url(../../assets/gallery/recent-valeting.jpg);
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat; }
