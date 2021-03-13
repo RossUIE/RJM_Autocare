@@ -44,7 +44,7 @@ const formValidation = (event) => {
 
     if(emailValid && nameValid && messageValid) {
 		$.ajax({
-			url: "https://formspree.io/xnqgzprz",
+			url: "https://formspree.io/f/mzbknjdb",
 			method: "POST",
 			data: {
 				Name: `${name}`,
