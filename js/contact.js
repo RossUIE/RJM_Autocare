@@ -4,6 +4,7 @@ const formValidation = (event) => {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
+    const phone = document.getElementById('phone').value;
 
     const form = document.getElementById('contact-form');
 
@@ -11,12 +12,14 @@ const formValidation = (event) => {
     const nameFormField = document.querySelector('.nameFormfield');
     const emailFormField = document.querySelector('.emailFormfield');
     const messageFormField = document.querySelector('.messageFormfield');
+    const phoneFormField = document.querySelector('.phoneFormField');
 
     const successMessage = document.querySelector('.form-success-message');
 
     var emailValid = false;
     var nameValid = false;
     var messageValid = false;
+    var phoneValid = false;
 
     if(name == null || name == "" || !validateName(name)) {
         nameFormField.classList.add('error');
@@ -32,10 +35,19 @@ const formValidation = (event) => {
         emailFormField.classList.remove('error');
         emailValid = true;
     }
+    if(phone) {
+        if(phone == null || phone == "" || !validatePhone(phone)) {
+            phoneFormField.classList.add('error');
+            phoneValid = false;
+        } else {
+            phoneFormField.classList.remove('error');
+            phoneValid = true;
+        }
+    }
+    
      if(message == null || message == "") {
         messageFormField.classList.add('error');
         messageValid = false;
-        console.log("oianw")
     } else {
         messageFormField.classList.remove('error');
         messageValid = true;
@@ -78,4 +90,9 @@ function validateEmail(email) {
 function validateName(name) {
     const re = /^[a-zA-Z ]+$/;
     return re.test(String(name).toLowerCase());
+}
+
+function validatePhone(phone) {
+    const re = /^(?:\W*\d){11}\W*$/;
+    return re.test(phone.toLowerCase());
 }

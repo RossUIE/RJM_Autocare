@@ -7,16 +7,16 @@
     },
 
     "interior": {
-        "small": 15,
-        "medium": 20,
-        "large": 25,
-        "jeep": 30
+        "small": 20,
+        "medium": 25,
+        "large": 30,
+        "jeep": 35
     },
 
     "exterior": {
         "small": 30,
-        "medium": 35,
-        "large": 45,
+        "medium": 40,
+        "large": 50,
         "jeep": 65
     },
 
@@ -24,7 +24,7 @@
         "small": 60,
         "medium": 70,
         "large": 80,
-        "jeep": 90
+        "jeep": 95
     },
 
     "fullCorrection": {
