@@ -260,7 +260,8 @@ textarea {
       display: flex;
       align-items: center;
       flex-grow: 1;
-      flex-basis: 360px; }
+      flex-basis: 360px;
+      justify-content: center; }
       @media only screen and (max-width: 768px) {
         .c-process-content_item {
           flex-direction: column;
