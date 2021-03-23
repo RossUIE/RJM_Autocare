@@ -21,16 +21,16 @@
     },
 
     "oneStage": {
-        "small": 60,
-        "medium": 70,
-        "large": 80,
-        "jeep": 95
+        "small": 100,
+        "medium": 120,
+        "large": 140,
+        "jeep": 160
     },
 
     "fullCorrection": {
-        "small": 120,
-        "medium": 140,
-        "large": 160,
-        "jeep": 180
+        "small": 150,
+        "medium": 200,
+        "large": 250,
+        "jeep": 300
     }
 }
