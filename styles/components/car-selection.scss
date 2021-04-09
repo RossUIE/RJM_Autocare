@@ -19,7 +19,7 @@
     &-content {
         display: flex;
         justify-content: space-between;
-        gap: rem(20);
+        grid-gap:rem(20);
         align-items: center;
         margin: 0 auto;
         flex-wrap: wrap;

@@ -9,25 +9,19 @@
         margin: auto;
         display: flex;
         justify-content: space-between;
-        gap: rem(20);
+        grid-gap: rem(20);
         margin: rem(30 0);
         @media only screen and (max-width: 819px) {
            flex-direction: column;
         }
         &_list {
-            display: -webkit-box;
-            display: -ms-flexbox;
+            
             display: flex;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-flow: column wrap;
-                    flex-flow: column wrap;
-            -ms-flex-pack: distribute;
-                justify-content: space-around;
-            gap: 1.25rem;
-            -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                    flex-grow: 1;
+            flex-flow: column wrap;
+            justify-content: space-around;
+            grid-gap: 1.25rem;
+            flex-grow: 1;
+            min-height: rem(965);
         
             @media only screen and (max-width: 819px) {
                 flex-direction: row;

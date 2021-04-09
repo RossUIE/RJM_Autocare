@@ -6,7 +6,7 @@
             display: flex;
             justify-content: center;
             padding: rem(20);
-            gap: rem(20);
+            grid-gap: rem(20);
             margin-bottom: rem(50);
 
             .c-gallery-option {
@@ -34,7 +34,7 @@
         &_images {
             display: flex;
             justify-content: space-between;
-            gap: rem(20);
+            grid-gap: rem(20);
             align-items: center;
             margin: 0 auto;
             flex-wrap: wrap;

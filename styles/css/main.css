@@ -280,7 +280,7 @@ textarea {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 15px; }
+    grid-gap: 15px; }
     .c-about_content .about-text {
       width: 50%;
       flex-grow: 1; }
@@ -340,7 +340,7 @@ textarea {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
-      gap: 1.5625rem; }
+      grid-gap: 1.5625rem; }
       .c-packages-content_items .package-item {
         display: flex;
         flex-direction: column;
@@ -451,7 +451,7 @@ textarea {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 2.5rem; }
+    grid-gap: 2.5rem; }
     .c-gallery-content .gallery-row {
       display: flex;
       justify-content: space-between;
@@ -459,7 +459,7 @@ textarea {
       @media only screen and (max-width: 650px) {
         .c-gallery-content .gallery-row {
           flex-direction: column;
-          gap: 20px; } }
+          grid-gap: 20px; } }
       .c-gallery-content .gallery-row .gallery-item {
         height: 12.5rem;
         background: #A30000;
@@ -664,7 +664,7 @@ textarea {
   .c-car-selection-content {
     display: flex;
     justify-content: space-between;
-    gap: 1.25rem;
+    grid-gap: 1.25rem;
     align-items: center;
     margin: 0 auto;
     flex-wrap: wrap; }
@@ -753,25 +753,18 @@ textarea {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    gap: 1.25rem;
+    grid-gap: 1.25rem;
     margin: 1.875rem 0; }
     @media only screen and (max-width: 819px) {
       .c-services-content {
         flex-direction: column; } }
     .c-services-content_list {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
       flex-flow: column wrap;
-      -ms-flex-pack: distribute;
       justify-content: space-around;
-      gap: 1.25rem;
-      -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-      flex-grow: 1; }
+      grid-gap: 1.25rem;
+      flex-grow: 1;
+      min-height: 60.3125rem; }
       @media only screen and (max-width: 819px) {
         .c-services-content_list {
           flex-direction: row; } }
@@ -941,7 +934,7 @@ textarea {
     display: flex;
     justify-content: center;
     padding: 1.25rem;
-    gap: 1.25rem;
+    grid-gap: 1.25rem;
     margin-bottom: 3.125rem; }
     .c-main-gallery-content_options .c-gallery-option {
       width: 12.5rem;
@@ -961,7 +954,7 @@ textarea {
   .c-main-gallery-content_images {
     display: flex;
     justify-content: space-between;
-    gap: 1.25rem;
+    grid-gap: 1.25rem;
     align-items: center;
     margin: 0 auto;
     flex-wrap: wrap; }
