@@ -758,6 +758,8 @@ textarea {
     @media only screen and (max-width: 819px) {
       .c-services-content {
         flex-direction: column; } }
+    .c-services-content .maintenance-content, .c-services-content .detailing-content, .c-services-content .exterior-content, .c-services-content .interior-content {
+      z-index: 100; }
     .c-services-content_list {
       display: flex;
       flex-flow: column wrap;

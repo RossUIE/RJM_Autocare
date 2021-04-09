@@ -4,26 +4,37 @@ let serviceType = "maintenance";
 let serviceData;
 
 window.onload = function() {
+    $('.maintenance-content').show();
+    $('.interior-content').hide();
+    $('.exterior-content').hide();
+    $('.detailing-content').hide();
     getJSONData();
 }
 
 const renderServiceContent = () => {
-    const mainContentContainer = document.getElementById("c-services-content_info");
     const services = document.querySelectorAll('.service-item').forEach(item => {
         item.addEventListener('click', event => {
             const service = event.target.innerText;
             if(service === "Maintenance Wash") {
-                $("#c-services-content_info").addClass("maintenance")
-                $(".c-list-content").load('../resources/ServicesContent/maintenance.html');
+                $('.maintenance-content').show();
+                $('.interior-content').hide();
+                $('.exterior-content').hide();
+                $('.detailing-content').hide();
             } else if(service === "Exterior Valet") {
-                $("#c-services-content_info").addClass("exterior")
-                $(".c-list-content").load('../resources/ServicesContent/exterior-valeting.html');
+                $('.maintenance-content').hide();
+                $('.interior-content').hide();
+                $('.exterior-content').show();
+                $('.detailing-content').hide();
             } else if(service === "Interior Valet") {
-                $("#c-services-content_info").addClass("interior")
-                $(".c-list-content").load('../resources/ServicesContent/interior-valeting.html');
+                $('.interior-content').show();
+                $('.maintenance-content').hide();
+                $('.exterior-content').hide();
+                $('.detailing-content').hide();
             } else if(service === "One Stage Enhancement") {
-                $(".c-list-content").load('../resources/ServicesContent/one-stage.html');
-                $("#c-services-content_info").addClass("detailing")
+                $('.maintenance-content').hide();
+                $('.interior-content').hide();
+                $('.exterior-content').hide();
+                $('.detailing-content').show();
             } else {
                 $("#c-services-content_info").addClass("detailing")
                 $(".c-list-content").load('../resources/ServicesContent/full-correction.html');

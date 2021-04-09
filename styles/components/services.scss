@@ -14,6 +14,10 @@
         @media only screen and (max-width: 819px) {
            flex-direction: column;
         }
+
+        .maintenance-content, .detailing-content, .exterior-content, .interior-content {
+            z-index: 100;
+        }
         &_list {
             
             display: flex;
