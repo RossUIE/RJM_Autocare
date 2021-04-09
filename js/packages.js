@@ -1,43 +1,45 @@
-
+$( document ).ready(function() {
 let carType = "small";
 let serviceType = "maintenance";
-let serviceData;
+let serviceData = {
+    maintenance: {
+        small: 15
+    }
+};
 
-window.onload = function() {
-    $('.maintenance-content').show();
-    $('.interior-content').hide();
-    $('.exterior-content').hide();
-    $('.detailing-content').hide();
-    getJSONData();
-}
+$('.maintenance-content').show();
+$('.interior-content').hide();
+$('.exterior-content').hide();
+$('.detailing-content').hide();
 
 const renderServiceContent = () => {
     const services = document.querySelectorAll('.service-item').forEach(item => {
         item.addEventListener('click', event => {
-            const service = event.target.innerText;
-            if(service === "Maintenance Wash") {
+            const service = event.target.id;
+            if(service === "maintenance") {
+                $('.interior-content').hide();
+                $('.exterior-content').hide();
+                $('.detailing-content').hide();
                 $('.maintenance-content').show();
-                $('.interior-content').hide();
-                $('.exterior-content').hide();
-                $('.detailing-content').hide();
-            } else if(service === "Exterior Valet") {
+                
+            } else if(service === "exterior") {
                 $('.maintenance-content').hide();
                 $('.interior-content').hide();
+                $('.detailing-content').hide();
                 $('.exterior-content').show();
-                $('.detailing-content').hide();
-            } else if(service === "Interior Valet") {
-                $('.interior-content').show();
+                
+            } else if(service === "interior") {
                 $('.maintenance-content').hide();
                 $('.exterior-content').hide();
                 $('.detailing-content').hide();
-            } else if(service === "One Stage Enhancement") {
+                $('.interior-content').show();
+                
+            } else if(service === "one-stage") {
                 $('.maintenance-content').hide();
                 $('.interior-content').hide();
                 $('.exterior-content').hide();
                 $('.detailing-content').show();
-            } else {
-                $("#c-services-content_info").addClass("detailing")
-                $(".c-list-content").load('../resources/ServicesContent/full-correction.html');
+                
             }
         });
     })
@@ -217,11 +219,14 @@ handlePriceSelection = () => {
     let price = document.getElementById("price").innerHTML = servicePrice;
 }
 
-const appGallery = () => {
+const appPackages = () => {
+    getJSONData();
     handleCarSelection();
     handleServiceType();
     renderServiceContent();
     handlePriceSelection();
 }
 
-appGallery();
+appPackages();
+
+});
