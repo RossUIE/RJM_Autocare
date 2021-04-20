@@ -37,7 +37,7 @@ a {
   font: inherit;
   color: #fff;
   border: none;
-  z-index: 9999998; }
+  z-index: 98; }
   .btn:hover {
     background: #952626;
     transition: all 0.2s ease; }
@@ -94,7 +94,7 @@ textarea {
   padding: 1.25rem 0;
   width: 100%;
   position: fixed;
-  z-index: 9999999;
+  z-index: 99;
   background: rgba(0, 0, 0, 0.7); }
   .c-header_content {
     display: flex;
@@ -577,7 +577,7 @@ textarea {
   position: relative;
   right: -2.1875rem;
   overflow: visible;
-  z-index: 9999998;
+  z-index: 98;
   font-size: 12px;
   max-width: 140px;
   width: 100%; }
