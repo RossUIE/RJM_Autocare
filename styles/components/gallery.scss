@@ -55,31 +55,71 @@
                 }
 
                 &.recent-detailing {
-                    background-image: url(../../assets/gallery/recent-detailing.jpg);
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background-image: url("https://res.cloudinary.com/dehfxejtr/image/upload/v1618923065/IMG_20210403_202353_xicrqg.jpg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        pointer-events: none;
+                        background-size: cover;
+                        filter: brightness(30%);
+                        border-radius: rem(5);
+                        z-index: 2;
+                    }
                 }
 
                 &.side-view {
-                    background-image: url(../../assets/gallery/audi-side-view.jpg);
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background-image: url("https://res.cloudinary.com/dehfxejtr/image/upload/v1618923065/IMG_20210403_202358_lpetzf.jpg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        pointer-events: none;
+                        background-size: cover;
+                        filter: brightness(30%);
+                        border-radius: rem(5);
+                        z-index: 2;
+                    }
                 }
 
                 &.side-view_2 {
-                    background-image: url(../../assets/gallery/audi-side-view_2.jpg);
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background-image: url("https://res.cloudinary.com/dehfxejtr/image/upload/v1618923170/IMG_20210317_223702_862_ya5wm1.jpg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        pointer-events: none;
+                        background-size: cover;
+                        filter: brightness(30%);
+                        border-radius: rem(5);
+                        z-index: 2;
+                    }
                 }
 
                 &.recent-valeting {
-                    background-image: url(../../assets/gallery/recent-valeting.jpg);
-                    background-position: center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 0; left: 0;
+                        width: 100%; height: 100%;
+                        background-image: url("https://res.cloudinary.com/dehfxejtr/image/upload/v1618918853/172025592_221782266388017_8412765843869299815_n_yoyptc.jpg");
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        pointer-events: none;
+                        background-size: cover;
+                        filter: brightness(30%);
+                        border-radius: rem(5);
+                        z-index: 2;
+                    }
                 }
 
                 @media only screen and (max-width: 650px) {
