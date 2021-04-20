@@ -193,20 +193,15 @@ $(document).ready(function() {
 		myWidget.render();
 		}
 
-	// window.addEventListener('load', getAllPhotos())
-
 	const handleGallerySelection = () => {
 		const galleryOption = document.querySelectorAll('.c-gallery-option').forEach(item => {
 			item.addEventListener('click', event => {
 				let option = event.target.innerText;
 				if(option === "Interior") {
-					$("#c-main-gallery-content_images").empty();
 					getAllInteriorPhotos();
 				} else if(option === "Exterior") {
-					$("#c-main-gallery-content_images").empty();
 					getAllExteriorPhotos();
 				} else {
-					$("#c-main-gallery-content_images").empty();
 					getAllPhotos();
 				}
 			})
