@@ -1,22 +1,5 @@
 $(document).ready(function() {
 	
-	$('.c-main-gallery-content_images').magnificPopup({
-		delegate: 'a',
-		type: 'image',
-		tLoading: 'Loading image #%curr%...',
-		mainClass: 'mfp-img-mobile',
-		gallery: {
-			enabled: true,
-			navigateByImgClick: true,
-			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-		},
-		image: {
-			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-			titleSrc: function(item) {
-				return '<small>RJM Autocare</small>';
-			}
-		}
-	});
 	const handleGalleryButtonSelection = () => {
 		var btnContainer = document.getElementById("c-main-gallery-content_options");
 		var btns = btnContainer.getElementsByClassName("c-gallery-option");
@@ -31,65 +14,264 @@ $(document).ready(function() {
 	}
 
 	const getAllInteriorPhotos = () => {
-		$('.loader').show();
-		return $.ajax({
-			url : "assets/gallery/interior",
-			success: function (data) {
-				$(data).find("a").attr("href", function (i, val) {
-					if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
-					} 
-				})
+		const myWidget = cloudinary.galleryWidget({
+			"container": "#c-main-gallery-content_images",
+			"cloudName": "dehfxejtr",
+			"mediaAssets": [{
+				"tag": "interior",
+				"mediaType": "image"
+			}],
+			"displayProps": {
+				"mode": "expanded",
+				"columns": 3,
+				"spacing": 15
 			},
-			complete: function() {
-				$('.loader').hide();
+			"aspectRatio": "8:5",
+			"transformation": {
+				"crop": "fill"
+			},
+			"bgColor": "transparent",
+			"carouselLocation": "left",
+			"carouselOffset": 10,
+			"navigation": "always",
+			"thumbnailProps": {
+				"mediaSymbolSize": 42,
+				"spacing": 20,
+				"width": 90,
+				"height": 90,
+				"navigationFloat": true,
+				"navigationShape": "square",
+				"navigationSize": 40,
+				"navigationColor": "#ffffff",
+				"selectedStyle": "border",
+				"selectedBorderPosition": "bottom",
+				"selectedBorderWidth": 4
+			},
+			"navigationButtonProps": {
+				"shape": "rectangle",
+				"iconColor": "#ffffff",
+				"color": "#000",
+				"size": 52,
+				"navigationPosition": "offset",
+				"navigationOffset": 12
+			},
+			"themeProps": {
+				"primary": "#000000",
+				"active": "#777777"
+			},
+			"secureDistribution": "res-s.cloudinary.com",
+			"secure": true,
+			"zoomProps": {
+				"type": "popup"
+			},
+			"loaderProps": {
+				"color": "red",
+				"style": "circle"
 			}
-		})
+		});
+		myWidget.render();
 	}
 
 	const getAllExteriorPhotos = () => {
-		$('.loader').show();
-		return $.ajax({
-			url : "assets/gallery/exterior",
-			success: function (data) {
-				$(data).find("a").attr("href", function (i, val) {
-					if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-						$(".c-main-gallery-content_images").append( "<a href='"+ val + "'>" + "<img class='gallery-item' src='"+ val +"'></a>" );
-					} 
-				});
-				
+		const myWidget = cloudinary.galleryWidget({
+			"container": "#c-main-gallery-content_images",
+			"cloudName": "dehfxejtr",
+			"mediaAssets": [{
+				"tag": "exterior",
+				"mediaType": "image"
+			}],
+			"displayProps": {
+				"mode": "expanded",
+				"columns": 3,
+				"spacing": 15
 			},
-			complete: function() {
-				$('.loader').hide();
+			"aspectRatio": "8:5",
+			"transformation": {
+				"crop": "fill"
+			},
+			"bgColor": "transparent",
+			"carouselLocation": "left",
+			"carouselOffset": 10,
+			"navigation": "always",
+			"thumbnailProps": {
+				"mediaSymbolSize": 42,
+				"spacing": 20,
+				"width": 90,
+				"height": 90,
+				"navigationFloat": true,
+				"navigationShape": "square",
+				"navigationSize": 40,
+				"navigationColor": "#ffffff",
+				"selectedStyle": "border",
+				"selectedBorderPosition": "bottom",
+				"selectedBorderWidth": 4
+			},
+			"navigationButtonProps": {
+				"shape": "rectangle",
+				"iconColor": "#ffffff",
+				"color": "#000",
+				"size": 52,
+				"navigationPosition": "offset",
+				"navigationOffset": 12
+			},
+			"themeProps": {
+				"primary": "#000000",
+				"active": "#777777"
+			},
+			"secureDistribution": "res-s.cloudinary.com",
+			"secure": true,
+			"zoomProps": {
+				"type": "popup"
+			},
+			"loaderProps": {
+				"color": "red",
+				"style": "circle"
 			}
-		})
+		});
+		myWidget.render();
 	}
 
 	const getAllPhotos = () => {
-		return $.when(getAllExteriorPhotos(), getAllInteriorPhotos()).done(function(){
-			$('.loader').hide();
+		const myWidget = cloudinary.galleryWidget({
+			"container": "#c-main-gallery-content_images",
+			"cloudName": "dehfxejtr",
+			"mediaAssets": [{
+				"tag": "interior",
+				"mediaType": "image"
+			}, {
+				"tag": "exterior",
+				"mediaType": "image"
+			}],
+			"displayProps": {
+				"mode": "expanded",
+				"columns": 3,
+				"spacing": 15
+			},
+			"aspectRatio": "8:5",
+			"transformation": {
+				"crop": "fill"
+			},
+			"bgColor": "transparent",
+			"carouselLocation": "left",
+			"carouselOffset": 10,
+			"navigation": "always",
+			"thumbnailProps": {
+				"mediaSymbolSize": 42,
+				"spacing": 20,
+				"width": 90,
+				"height": 90,
+				"navigationFloat": true,
+				"navigationShape": "square",
+				"navigationSize": 40,
+				"navigationColor": "#ffffff",
+				"selectedStyle": "border",
+				"selectedBorderPosition": "bottom",
+				"selectedBorderWidth": 4
+			},
+			"navigationButtonProps": {
+				"shape": "rectangle",
+				"iconColor": "#ffffff",
+				"color": "#000",
+				"size": 52,
+				"navigationPosition": "offset",
+				"navigationOffset": 12
+			},
+			"themeProps": {
+				"primary": "#000000",
+				"active": "#777777"
+			},
+			"secureDistribution": "res-s.cloudinary.com",
+			"secure": true,
+			"zoomProps": {
+				"type": "popup"
+			},
+			"loaderProps": {
+				"color": "red",
+				"style": "circle"
+			}
 		});
-	}
+		myWidget.render();
+		}
 
-	window.addEventListener('load', getAllPhotos())
+	// window.addEventListener('load', getAllPhotos())
 
 	const handleGallerySelection = () => {
 		const galleryOption = document.querySelectorAll('.c-gallery-option').forEach(item => {
 			item.addEventListener('click', event => {
 				let option = event.target.innerText;
 				if(option === "Interior") {
-					$(".c-main-gallery-content_images").empty();
+					$("#c-main-gallery-content_images").empty();
 					getAllInteriorPhotos();
 				} else if(option === "Exterior") {
-					$(".c-main-gallery-content_images").empty();
+					$("#c-main-gallery-content_images").empty();
 					getAllExteriorPhotos();
 				} else {
-					$(".c-main-gallery-content_images").empty();
+					$("#c-main-gallery-content_images").empty();
 					getAllPhotos();
 				}
 			})
 		})
 	}
+
+	const myWidget = cloudinary.galleryWidget({
+		"container": "#c-main-gallery-content_images",
+		"cloudName": "dehfxejtr",
+		"mediaAssets": [{
+			"tag": "interior",
+			"mediaType": "image"
+		}, {
+			"tag": "exterior",
+			"mediaType": "image"
+		}],
+		"displayProps": {
+			"mode": "expanded",
+			"columns": 3,
+			"spacing": 15
+		},
+		"aspectRatio": "8:5",
+		"transformation": {
+			"crop": "fill"
+		},
+		"bgColor": "transparent",
+		"carouselLocation": "left",
+		"carouselOffset": 10,
+		"navigation": "always",
+		"thumbnailProps": {
+			"mediaSymbolSize": 42,
+			"spacing": 20,
+			"width": 90,
+			"height": 90,
+			"navigationFloat": true,
+			"navigationShape": "square",
+			"navigationSize": 40,
+			"navigationColor": "#ffffff",
+			"selectedStyle": "border",
+			"selectedBorderPosition": "bottom",
+			"selectedBorderWidth": 4
+		},
+		"navigationButtonProps": {
+			"shape": "rectangle",
+			"iconColor": "#ffffff",
+			"color": "#000",
+			"size": 52,
+			"navigationPosition": "offset",
+			"navigationOffset": 12
+		},
+		"themeProps": {
+			"primary": "#000000",
+			"active": "#777777"
+		},
+		"secureDistribution": "res-s.cloudinary.com",
+		"secure": true,
+		"zoomProps": {
+			"type": "popup"
+		},
+		"loaderProps": {
+			"color": "red",
+			"style": "circle"
+		}
+	});
+	myWidget.render();
 
 	const galleryApp = () => {
 		handleGalleryButtonSelection();
@@ -97,4 +279,4 @@ $(document).ready(function() {
 	}
 
 	galleryApp();
-});
+})
