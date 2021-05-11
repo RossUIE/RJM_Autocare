@@ -44,16 +44,19 @@ a {
 
 .c-backdrop {
   position: fixed;
-  top: 70px;
+  top: 100px;
   left: 0;
   height: 100vh;
   width: 100%;
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 100;
   display: none; }
   @media only screen and (max-width: 659px) {
     .c-backdrop {
       display: none; } }
+
+.backdrop-active {
+  display: block; }
 
 input, textarea {
   border: none;
@@ -1015,6 +1018,15 @@ textarea {
       max-width: 100%;
       object-fit: cover; }
 
+#c-main-gallery-content_images {
+  max-width: 80%;
+  width: 100%;
+  margin: auto; }
+  @media only screen and (max-width: 659px) {
+    #c-main-gallery-content_images {
+      max-width: 100%;
+      width: 100%; } }
+
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
@@ -1470,5 +1482,108 @@ img.mfp-img {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+.c-booking-content_list {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-grow: 1;
+  flex-wrap: wrap; }
+  .c-booking-content_list .service-item {
+    border: 1px solid black;
+    flex-grow: 1;
+    border-radius: 0.3125rem;
+    position: relative;
+    padding: 0.9375rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+    min-height: 9.375rem;
+    flex-basis: 13.125rem; }
+    .c-booking-content_list .service-item.active::before {
+      filter: brightness(60%) !important;
+      z-index: 3; }
+    .c-booking-content_list .service-item h3 {
+      z-index: 3;
+      color: #fff;
+      position: inherit; }
+
+.c-booking {
+  display: flex;
+  justify-content: space-between; }
+  @media only screen and (max-width: 819px) {
+    .c-booking {
+      flex-direction: column-reverse; } }
+  .c-booking .c-booking-form {
+    width: 100%;
+    border-radius: 0.3125rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    padding: 1rem;
+    margin: 3.125rem auto; }
+    .c-booking .c-booking-form_title {
+      border-bottom: 0.0625rem solid #cbcbd2; }
+    .c-booking .c-booking-form_content .booking-form {
+      display: flex;
+      flex-direction: column; }
+      .c-booking .c-booking-form_content .booking-form label {
+        color: #343434;
+        font-weight: bold;
+        margin-top: 1.25rem; }
+      .c-booking .c-booking-form_content .booking-form .form-field {
+        display: flex;
+        flex-direction: column; }
+      .c-booking .c-booking-form_content .booking-form input, .c-booking .c-booking-form_content .booking-form textarea {
+        border-radius: 0.3125rem;
+        border: 1px solid #cbcbd2;
+        font: inherit;
+        padding: 0.625rem;
+        margin-top: 0.3125rem; }
+      .c-booking .c-booking-form_content .booking-form .c-form-actions {
+        margin: 1rem 0 0 auto; }
+
+.c-selection-details {
+  width: 100%;
+  border-radius: 0.3125rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 1rem;
+  margin: 3.125rem 0 3.125rem 1.25rem; }
+  @media only screen and (max-width: 819px) {
+    .c-selection-details {
+      max-width: 100%;
+      margin: 3.125rem 0 0 0; } }
+  .c-selection-details_title {
+    margin-bottom: 1.25rem; }
+  .c-selection-details_content .c-details-item {
+    margin-bottom: 1.25rem;
+    display: flex;
+    padding: 1rem;
+    border: 0.0625rem solid #cbcbd2; }
+    .c-selection-details_content .c-details-item .c-selection-value {
+      font-weight: bold; }
+
+.c-date-picker_content {
+  margin-top: 1.25rem; }
+.c-date-picker input {
+  background-color: #A30000;
+  border-radius: 0.3125rem;
+  padding: 0.625rem 1.875rem;
+  cursor: pointer;
+  font: inherit;
+  color: #fff;
+  border: none;
+  z-index: 98;
+  text-align: center; }
+  .c-date-picker input::placeholder {
+    color: #fff; }
+  .c-date-picker input:hover {
+    background: #952626;
+    transition: all 0.2s ease; }
+
+.mc-calendar--modal .mc-display, .mc-date--active.mc-date--picked, .mc-calendar--modal {
+  background-color: #A30000 !important; }
+
+.mc-table__weekday {
+  color: #A30000 !important; }
 
 /*# sourceMappingURL=main.css.map */
