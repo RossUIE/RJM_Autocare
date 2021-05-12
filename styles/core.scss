@@ -49,6 +49,11 @@ a {
         background: #952626;
         transition: all 0.2s ease;
     }
+
+    &:disabled {
+        background-color: $input-border;
+        cursor: not-allowed;
+    }
 }
 
 .c-backdrop {

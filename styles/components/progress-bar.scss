@@ -1,0 +1,56 @@
+.progress-container {
+    margin: rem(50 auto);
+    &-content {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        position: relative;
+        margin-bottom: rem(30);
+        max-width: 100%;
+        width: 100%;
+
+        &::before {
+            content: "";
+            background-color: $input-border;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: rem(4);
+            width: 100%;
+            z-index: -1;
+            transition: 0.4s ease;
+        }
+    }
+
+    .progress {
+        background-color: $brand-red;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: rem(3);
+        transform: translateY(-50%);
+        width: 0%;
+        z-index: -1;
+        transition: 0.4s ease;
+    }
+
+    .circle {
+        background-color: white;
+        color: $bodyText;
+        border-radius: 50%;
+        height: rem(50);
+        width: rem(50);
+        border: 3px solid $input-border;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s ease;
+
+        &.active-circle {
+            border-color: $brand-red;
+            background-color: $brand-red;
+            color: white;
+        }
+    }
+    
+}

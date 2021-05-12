@@ -41,6 +41,9 @@ a {
   .btn:hover {
     background: #952626;
     transition: all 0.2s ease; }
+  .btn:disabled {
+    background-color: #cbcbd2;
+    cursor: not-allowed; }
 
 .c-backdrop {
   position: fixed;
@@ -1482,6 +1485,28 @@ img.mfp-img {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+.selection-step-container {
+  background-color: #fff;
+  min-height: 9.375rem; }
+  .selection-step-container .c-car-selection {
+    background-color: white !important; }
+  .selection-step-container .user-selection {
+    margin: 1.25rem 0;
+    text-align: center; }
+    .selection-step-container .user-selection .selection {
+      font-weight: bold; }
+
+.progress-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 3.125rem auto; }
+  .progress-btn-container button {
+    margin-left: 0.625rem; }
+
+.c-booking-actions {
+  display: flex;
+  justify-content: center; }
+
 .c-booking-content_list {
   display: flex;
   gap: 1rem;
@@ -1500,7 +1525,7 @@ img.mfp-img {
     text-align: center;
     cursor: pointer;
     min-height: 9.375rem;
-    flex-basis: 13.125rem; }
+    flex-basis: 6.25rem; }
     .c-booking-content_list .service-item.active::before {
       filter: brightness(60%) !important;
       z-index: 3; }
@@ -1580,10 +1605,82 @@ img.mfp-img {
     background: #952626;
     transition: all 0.2s ease; }
 
+#car-selection .c-car-selection-content_item {
+  padding: 1.875rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  flex-grow: 1;
+  flex-basis: 100px;
+  cursor: pointer; }
+  @media only screen and (max-width: 768px) {
+    #car-selection .c-car-selection-content_item {
+      flex-direction: column;
+      text-align: center; } }
+  #car-selection .c-car-selection-content_item:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s ease; }
+  #car-selection .c-car-selection-content_item.active {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.3s ease; }
+  @media only screen and (max-width: 768px) {
+    #car-selection .c-car-selection-content_item .item-content {
+      margin-left: 0; } }
+  #car-selection .c-car-selection-content_item h3 {
+    margin: 0.625rem 0; }
+
 .mc-calendar--modal .mc-display, .mc-date--active.mc-date--picked, .mc-calendar--modal {
   background-color: #A30000 !important; }
 
 .mc-table__weekday {
   color: #A30000 !important; }
+
+.progress-container {
+  margin: 3.125rem auto; }
+  .progress-container-content {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    margin-bottom: 1.875rem;
+    max-width: 100%;
+    width: 100%; }
+    .progress-container-content::before {
+      content: "";
+      background-color: #cbcbd2;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      height: 0.25rem;
+      width: 100%;
+      z-index: -1;
+      transition: 0.4s ease; }
+  .progress-container .progress {
+    background-color: #A30000;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 0.1875rem;
+    transform: translateY(-50%);
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease; }
+  .progress-container .circle {
+    background-color: white;
+    color: #343434;
+    border-radius: 50%;
+    height: 3.125rem;
+    width: 3.125rem;
+    border: 3px solid #cbcbd2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease; }
+    .progress-container .circle.active-circle {
+      border-color: #A30000;
+      background-color: #A30000;
+      color: white; }
 
 /*# sourceMappingURL=main.css.map */

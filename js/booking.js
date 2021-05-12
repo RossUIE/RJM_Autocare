@@ -252,6 +252,7 @@
                 getCarType(this.id);
                 handlePriceSelection(event);
                 document.getElementById("size-value").innerHTML = getCarType(this.id);
+                document.getElementById("users-car-selection").innerHTML = getCarType(this.id);
                 console.log(selectionData)
             });
         }
@@ -269,6 +270,7 @@
                   getServiceType(this.id);
                   handlePriceSelection(event);
                   document.getElementById("package-value").innerHTML = getServiceType(this.id);
+                  document.getElementById("users-package-selection").innerHTML = getCarType(this.id);
                   console.log(selectionData)
             });
         }
@@ -288,6 +290,7 @@
 
     const renderDatePicker = () => {
         const backdrop = document.getElementById('calender-backdrop');
+        const dateSelection = document.getElementById("date-selection");
         const myDatePicker = MCDatepicker.create({ 
             el: '#date-picker',
             dateFormat: 'DD-MM-YYYY',
@@ -299,8 +302,11 @@
       })
 
       myDatePicker.onOpen(() => backdrop.classList.add('backdrop-active'));
-      myDatePicker.onClose(() => backdrop.classList.remove('backdrop-active'));
       myDatePicker.onClose(() => {
+        backdrop.classList.remove('backdrop-active');
+        update();
+      }) 
+      myDatePicker.onSelect(() => {
           selectionData.date = myDatePicker.getFormatedDate();
           document.getElementById('date-value').innerHTML = myDatePicker.getFormatedDate();
       });
