@@ -67,6 +67,7 @@
         </section>
         <!-- end of welcome banner -->
         <!-- start of booking -->
+        <div class="loader" style="margin-top: 100px;"></div>
         <script>
             var widget = new SimplybookWidget(
                 {"widget_type":"iframe",
@@ -85,7 +86,7 @@
                     "hide_img_mode":"0",
                     "show_sidebar":"1",
                     "sb_busy":"#dad2ce",
-                    "sb_available":"#ffc9c9"
+                    "sb_available":"#a30000"
                 },
                     "timeline":"modern",
                     "datepicker":"top_calendar",
@@ -95,7 +96,6 @@
                         "predefined":[]
                     }}
             );
-            document.getElementsById("widget").innerHTML = widget;
         </script>
         <!-- end of booking -->
         </div>
@@ -158,6 +158,7 @@
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
+  <script src="./js/booking.js"></script>
 <!-- JS -->
 <script src="js/core.js"></script>
 </html>
