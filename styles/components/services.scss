@@ -29,6 +29,7 @@
         
             @media only screen and (max-width: 819px) {
                 flex-direction: row;
+                min-height: rem(200);
              }
             .service-item {
                 border: 1px solid black;
@@ -42,7 +43,7 @@
                 text-align: center;
                 cursor: pointer;
                 min-height: rem(150);
-                flex-basis: rem(210);
+                flex-basis: rem(100);
 
                 &.active {
                     &::before {

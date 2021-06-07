@@ -729,7 +729,7 @@ textarea {
       text-align: center;
       justify-content: center;
       flex-grow: 1;
-      flex-basis: 289px;
+      flex-basis: 6.25rem;
       cursor: pointer; }
       @media only screen and (max-width: 768px) {
         .c-car-selection-content_item {
@@ -815,7 +815,8 @@ textarea {
       min-height: 60.3125rem; }
       @media only screen and (max-width: 819px) {
         .c-services-content_list {
-          flex-direction: row; } }
+          flex-direction: row;
+          min-height: 12.5rem; } }
       .c-services-content_list .service-item {
         border: 1px solid black;
         flex-grow: 1;
@@ -828,7 +829,7 @@ textarea {
         text-align: center;
         cursor: pointer;
         min-height: 9.375rem;
-        flex-basis: 13.125rem; }
+        flex-basis: 6.25rem; }
         .c-services-content_list .service-item.active::before {
           filter: brightness(60%) !important;
           z-index: 3; }

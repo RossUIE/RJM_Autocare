@@ -41,7 +41,7 @@
             text-align: center;
             justify-content: center;
             flex-grow: 1;
-            flex-basis: 289px;
+            flex-basis: rem(100);
             cursor: pointer;
 
             @media only screen and (max-width: 768px) {
