@@ -729,7 +729,7 @@ textarea {
       text-align: center;
       justify-content: center;
       flex-grow: 1;
-      flex-basis: 6.25rem;
+      flex-basis: 7.25rem;
       cursor: pointer; }
       @media only screen and (max-width: 768px) {
         .c-car-selection-content_item {
@@ -829,7 +829,7 @@ textarea {
         text-align: center;
         cursor: pointer;
         min-height: 9.375rem;
-        flex-basis: 6.25rem; }
+        flex-basis: 9.5rem; }
         .c-services-content_list .service-item.active::before {
           filter: brightness(60%) !important;
           z-index: 3; }
