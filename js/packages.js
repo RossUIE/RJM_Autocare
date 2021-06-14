@@ -11,37 +11,77 @@ $('.maintenance-content').show();
 $('.interior-content').hide();
 $('.exterior-content').hide();
 $('.detailing-content').hide();
+$('.bronze-content').hide();
+$('.silver-content').hide();
+$('.gold-content').hide();
 
 const renderServiceContent = () => {
-    const services = document.querySelectorAll('.service-item').forEach(item => {
-        item.addEventListener('click', event => {
-            const service = event.target.id;
-            if(service === "maintenance") {
-                $('.interior-content').hide();
-                $('.exterior-content').hide();
-                $('.detailing-content').hide();
-                $('.maintenance-content').show();
-                
-            } else if(service === "exterior") {
-                $('.maintenance-content').hide();
-                $('.interior-content').hide();
-                $('.detailing-content').hide();
-                $('.exterior-content').show();
-                
-            } else if(service === "interior") {
-                $('.maintenance-content').hide();
-                $('.exterior-content').hide();
-                $('.detailing-content').hide();
-                $('.interior-content').show();
-                
-            } else if(service === "one-stage") {
-                $('.maintenance-content').hide();
-                $('.interior-content').hide();
-                $('.exterior-content').hide();
-                $('.detailing-content').show();
-                
-            }
-        });
+    const services = document.getElementById('package-selection');
+
+    services.addEventListener('change', event => {
+        const service = event.target.value;
+        if(service === "maintenance") {
+            $('.interior-content').hide();
+            $('.exterior-content').hide();
+            $('.detailing-content').hide();
+            $('.bronze-content').hide();
+            $('.silver-content').hide();
+            $('.gold-content').hide();
+            $('.maintenance-content').show();
+            
+        } else if(service === "bronze") {
+            $('.interior-content').hide();
+            $('.exterior-content').hide();
+            $('.detailing-content').hide();
+            $('.silver-content').hide();
+            $('.gold-content').hide();
+            $('.maintenance-content').hide();
+            $('.bronze-content').show();
+        } else if(service === "silver") {
+            $('.interior-content').hide();
+            $('.exterior-content').hide();
+            $('.detailing-content').hide();
+            $('.bronze-content').hide();
+            $('.gold-content').hide();
+            $('.maintenance-content').hide();
+            $('.silver-content').show();
+
+        } else if(service === "gold") {
+            $('.interior-content').hide();
+            $('.exterior-content').hide();
+            $('.detailing-content').hide();
+            $('.bronze-content').hide();
+            $('.silver-content').hide();
+            $('.maintenance-content').hide();
+            $('.gold-content').show();
+        } else if(service === "exterior") {
+            $('.maintenance-content').hide();
+            $('.interior-content').hide();
+            $('.detailing-content').hide();
+            $('.bronze-content').hide();
+            $('.silver-content').hide();
+            $('.gold-content').hide();
+            $('.exterior-content').show();
+            
+        } else if(service === "interior") {
+            $('.maintenance-content').hide();
+            $('.exterior-content').hide();
+            $('.detailing-content').hide();
+            $('.bronze-content').hide();
+            $('.silver-content').hide();
+            $('.gold-content').hide();
+            $('.interior-content').show();
+            
+        } else if(service === "one-stage") {
+            $('.maintenance-content').hide();
+            $('.interior-content').hide();
+            $('.exterior-content').hide();
+            $('.bronze-content').hide();
+            $('.silver-content').hide();
+            $('.gold-content').hide();
+            $('.detailing-content').show();
+            
+        }
     })
 }
 
@@ -97,19 +137,15 @@ getServiceType = (service) => {
 }
 
 handleServiceType = (event) => {
-    var btnContainer = document.getElementById("c-services-content_list");
-    var btns = btnContainer.getElementsByClassName("service-item");
+    var btnContainer = document.getElementById('package-selection');
+    console.log(btnContainer)
     
-    for (var i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function(event) {
-            var current = btnContainer.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-              getServiceType(this.id);
-              handlePriceSelection(event);
-              handleBackgroundImage(event)
-        });
-    }
+    btnContainer.addEventListener("change", function(event) {
+        console.log('ubud')
+        getServiceType(this.value);
+        handlePriceSelection(event);
+        handleBackgroundImage(event)
+    });
 }
 
 setData = (data) => {
@@ -143,6 +179,60 @@ handlePriceSelection = () => {
         servicePrice = serviceData.maintenance.jeep
     }
     // end of maintenance
+
+    // bronze
+    if(carType === 'small' && serviceType === 'bronze') {
+        servicePrice = serviceData.bronze.small
+    }
+
+    if(carType === 'medium' && serviceType === 'bronze') {
+        servicePrice = serviceData.bronze.medium
+    }
+
+    if(carType === 'large' && serviceType === 'bronze') {
+        servicePrice = serviceData.bronze.large
+    }
+
+    if(carType === 'suv/jeep' && serviceType === 'bronze') {
+        servicePrice = serviceData.bronze.jeep
+    }
+    // end of bronze
+
+    // silver
+    if(carType === 'small' && serviceType === 'silver') {
+        servicePrice = serviceData.silver.small
+    }
+
+    if(carType === 'medium' && serviceType === 'silver') {
+        servicePrice = serviceData.silver.medium
+    }
+
+    if(carType === 'large' && serviceType === 'silver') {
+        servicePrice = serviceData.silver.large
+    }
+
+    if(carType === 'suv/jeep' && serviceType === 'silver') {
+        servicePrice = serviceData.silver.jeep
+    }
+    // end of silver
+
+    // gold
+    if(carType === 'small' && serviceType === 'gold') {
+        servicePrice = serviceData.gold.small
+    }
+
+    if(carType === 'medium' && serviceType === 'gold') {
+        servicePrice = serviceData.gold.medium
+    }
+
+    if(carType === 'large' && serviceType === 'gold') {
+        servicePrice = serviceData.gold.large
+    }
+
+    if(carType === 'suv/jeep' && serviceType === 'gold') {
+        servicePrice = serviceData.gold.jeep
+    }
+    // end of gold
 
     // start of exterior
     if(carType === 'small' && serviceType === 'exterior') {

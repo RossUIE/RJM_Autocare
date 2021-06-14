@@ -96,6 +96,71 @@ textarea {
   font-weight: normal;
   font-size: 1.5rem; }
 
+/*style the items (options), including the selected item:*/
+#package-selection {
+  color: #343434;
+  padding: 16px 16px;
+  border: 1px solid transparent;
+  border-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  user-select: none;
+  max-width: 31.25rem;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  background-image: none;
+  margin-top: 1.25rem;
+  background-image: linear-gradient(45deg, transparent 50%, #A30000 50%), linear-gradient(135deg, #A30000 50%, transparent 50%);
+  background-position: calc(100% - 20px) calc(1em + 8px), calc(100% - 15px) calc(1em + 8px);
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat; }
+  #package-selection:focus {
+    background-image: linear-gradient(45deg, #A30000 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #A30000 50%);
+    background-position: calc(100% - 15px) 20px, calc(100% - 20px) 20px;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+    outline: 0; }
+
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none; }
+
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  overflow: hidden;
+  border-radius: .25em;
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer; }
+
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #A30000;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease; }
+
+/* Transition */
+.select:hover {
+  color: #f39c12;
+  background-color: red; }
+
 .c-header {
   padding: 1.25rem 0;
   width: 100%;
@@ -804,7 +869,7 @@ textarea {
     @media only screen and (max-width: 819px) {
       .c-services-content {
         flex-direction: column; } }
-    .c-services-content .maintenance-content, .c-services-content .detailing-content, .c-services-content .exterior-content, .c-services-content .interior-content {
+    .c-services-content .maintenance-content, .c-services-content .detailing-content, .c-services-content .exterior-content, .c-services-content .interior-content, .c-services-content .bronze-content, .c-services-content .silver-content, .c-services-content .gold-content {
       z-index: 100; }
     .c-services-content_list {
       display: flex;

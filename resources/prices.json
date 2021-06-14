@@ -6,6 +6,27 @@
         "jeep": 25
     },
 
+    "bronze": {
+        "small": 15,
+        "medium": 20,
+        "large": 25,
+        "jeep": 25
+    },
+
+    "silver": {
+        "small": 15,
+        "medium": 20,
+        "large": 25,
+        "jeep": 25
+    },
+
+    "gold": {
+        "small": 15,
+        "medium": 20,
+        "large": 25,
+        "jeep": 25
+    },
+
     "interior": {
         "small": 20,
         "medium": 25,
