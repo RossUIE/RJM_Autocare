@@ -103,7 +103,17 @@
 
             .c-info {
                 display: flex;
+                flex-direction: column;
                 z-index: 3;
+
+                .c-key-points {
+                    margin-top: rem(20);
+                }
+
+                ul {
+                    margin-left: rem(30);
+                    margin-top: rem(10);
+                }
             }
 
             .c-service-time {

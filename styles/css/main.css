@@ -114,16 +114,11 @@ textarea {
   box-shadow: none;
   background-image: none;
   margin-top: 1.25rem;
+  font-size: 1.125rem;
   background-image: linear-gradient(45deg, transparent 50%, #A30000 50%), linear-gradient(135deg, #A30000 50%, transparent 50%);
   background-position: calc(100% - 20px) calc(1em + 8px), calc(100% - 15px) calc(1em + 8px);
   background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat; }
-  #package-selection:focus {
-    background-image: linear-gradient(45deg, #A30000 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #A30000 50%);
-    background-position: calc(100% - 15px) 20px, calc(100% - 20px) 20px;
-    background-size: 5px 5px, 5px 5px, 1px 1.5em;
-    background-repeat: no-repeat;
-    outline: 0; }
 
 /* Remove IE arrow */
 select::-ms-expand {
@@ -937,7 +932,13 @@ select::-ms-expand {
           margin-bottom: 1.25rem; }
       .c-services-content_info .c-info {
         display: flex;
+        flex-direction: column;
         z-index: 3; }
+        .c-services-content_info .c-info .c-key-points {
+          margin-top: 1.25rem; }
+        .c-services-content_info .c-info ul {
+          margin-left: 1.875rem;
+          margin-top: 0.625rem; }
       .c-services-content_info .c-service-time {
         z-index: 3;
         display: flex;

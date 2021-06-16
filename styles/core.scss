@@ -118,49 +118,34 @@ textarea {
   
   /*style the items (options), including the selected item:*/
   #package-selection {
-    color: $bodyText;
-    padding: 16px 16px;
-    border: 1px solid transparent;
-    border-color: rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    user-select: none;
-    max-width: rem(500);
-    width: 100%;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    outline: 0;
-    box-shadow: none;
-    background-image: none;
-    margin-top: rem(20);
-    background-image:
-    linear-gradient(45deg, transparent 50%, $brand-red 50%),
-    linear-gradient(135deg, $brand-red 50%, transparent 50%);
-  background-position:
-    calc(100% - 20px) calc(1em + 8px),
-    calc(100% - 15px) calc(1em + 8px);
-  background-size:
-    5px 5px,
-    5px 5px,
-    1px 1.5em;
-  background-repeat: no-repeat;
-
-  &:focus {
-    background-image:
-      linear-gradient(45deg, $brand-red 50%, transparent 50%),
-      linear-gradient(135deg, transparent 50%, $brand-red 50%);
-      
-    background-position:
-      calc(100% - 15px) 20px,
-      calc(100% - 20px) 20px;
-    background-size:
-      5px 5px,
-      5px 5px,
-      1px 1.5em;
-    background-repeat: no-repeat;
-    outline: 0;
-  }
+      color: $bodyText;
+      padding: 16px 16px;
+      border: 1px solid transparent;
+      border-color: rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      user-select: none;
+      max-width: rem(500);
+      width: 100%;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      outline: 0;
+      box-shadow: none;
+      background-image: none;
+      margin-top: rem(20);
+      font-size: rem(18);
+      background-image:
+        linear-gradient(45deg, transparent 50%, $brand-red 50%),
+        linear-gradient(135deg, $brand-red 50%, transparent 50%);
+      background-position:
+        calc(100% - 20px) calc(1em + 8px),
+        calc(100% - 15px) calc(1em + 8px);
+      background-size:
+        5px 5px,
+        5px 5px,
+        1px 1.5em;
+      background-repeat: no-repeat;
   }
 
   /* Remove IE arrow */
