@@ -7,24 +7,24 @@
     },
 
     "bronze": {
-        "small": 15,
-        "medium": 20,
-        "large": 25,
-        "jeep": 25
+        "small": 25,
+        "medium": 30,
+        "large": 35,
+        "jeep": 35
     },
 
     "silver": {
-        "small": 15,
-        "medium": 20,
-        "large": 25,
-        "jeep": 25
+        "small": 35,
+        "medium": 45,
+        "large": 55,
+        "jeep": 60
     },
 
     "gold": {
-        "small": 15,
-        "medium": 20,
-        "large": 25,
-        "jeep": 25
+        "small": 55,
+        "medium": 65,
+        "large": 75,
+        "jeep": 80
     },
 
     "interior": {
