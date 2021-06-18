@@ -236,3 +236,54 @@
         z-index: 2;
     }
 }
+
+.bronze {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url("https://res.cloudinary.com/dehfxejtr/image/upload/v1624016633/bronze_test_nxsp0o.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        pointer-events: none;
+        background-size: cover;
+        filter: brightness(20%);
+        border-radius: rem(5);
+        z-index: 2;
+    }
+}
+
+.silver {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url("https://res.cloudinary.com/dehfxejtr/image/upload/v1624016844/silver_flfbis.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        pointer-events: none;
+        background-size: cover;
+        filter: brightness(20%);
+        border-radius: rem(5);
+        z-index: 2;
+    }
+}
+
+.gold {
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: url("https://res.cloudinary.com/dehfxejtr/image/upload/v1624016971/gold_nvs7dp.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        pointer-events: none;
+        background-size: cover;
+        filter: brightness(20%);
+        border-radius: rem(5);
+        z-index: 2;
+    }
+}

@@ -102,29 +102,68 @@ const handleCarSelection = () => {
 
 const handleBackgroundImage = (event) => {
     const mainContentContainer = document.getElementById("c-services-content_info");
-    const image = event.target.id;
+    const image = event.target.value;
     if(image === "maintenance") {
         $(mainContentContainer).removeClass("interior");
         $(mainContentContainer).removeClass("exterior");
         $(mainContentContainer).removeClass("detailing");
+        $(mainContentContainer).removeClass("bronze");
+        $(mainContentContainer).removeClass("silver");
+        $(mainContentContainer).removeClass("gold");
         $(mainContentContainer).addClass("maintenance");
     } 
+    if(image === "bronze") {
+        $(mainContentContainer).removeClass("maintenance");
+        $(mainContentContainer).removeClass("interior");
+        $(mainContentContainer).removeClass("exterior");
+        $(mainContentContainer).removeClass("detailing");
+        $(mainContentContainer).removeClass("silver");
+        $(mainContentContainer).removeClass("gold");
+        $(mainContentContainer).addClass("bronze");
+    }
+    if(image === "silver") {
+        $(mainContentContainer).removeClass("maintenance");
+        $(mainContentContainer).removeClass("interior");
+        $(mainContentContainer).removeClass("exterior");
+        $(mainContentContainer).removeClass("detailing");
+        $(mainContentContainer).removeClass("bronze");
+        $(mainContentContainer).removeClass("gold");
+        $(mainContentContainer).addClass("silver");
+    }
+    if(image === "gold") {
+        $(mainContentContainer).removeClass("maintenance");
+        $(mainContentContainer).removeClass("interior");
+        $(mainContentContainer).removeClass("exterior");
+        $(mainContentContainer).removeClass("detailing");
+        $(mainContentContainer).removeClass("bronze");
+        $(mainContentContainer).removeClass("silver");
+        $(mainContentContainer).addClass("gold");
+    }
     if(image === "exterior") {
         $(mainContentContainer).removeClass("interior");
         $(mainContentContainer).removeClass("maintenance");
         $(mainContentContainer).removeClass("detailing");
+        $(mainContentContainer).removeClass("bronze");
+        $(mainContentContainer).removeClass("silver");
+        $(mainContentContainer).removeClass("gold");
         $(mainContentContainer).addClass("exterior");
     }
     if(image === "interior") {
         $(mainContentContainer).removeClass("detailing");
         $(mainContentContainer).removeClass("maintenance");
         $(mainContentContainer).removeClass("exterior");
+        $(mainContentContainer).removeClass("bronze");
+        $(mainContentContainer).removeClass("silver");
+        $(mainContentContainer).removeClass("gold");
         $(mainContentContainer).addClass("interior")
     } 
     if(image === "one-stage" || image === "full-correction") {
         $(mainContentContainer).removeClass("maintenance");
         $(mainContentContainer).removeClass("interior");
         $(mainContentContainer).removeClass("exterior");
+        $(mainContentContainer).removeClass("bronze");
+        $(mainContentContainer).removeClass("silver");
+        $(mainContentContainer).removeClass("gold");
         $(mainContentContainer).addClass("detailing");
     }
 }
@@ -138,10 +177,8 @@ getServiceType = (service) => {
 
 handleServiceType = (event) => {
     var btnContainer = document.getElementById('package-selection');
-    console.log(btnContainer)
     
     btnContainer.addEventListener("change", function(event) {
-        console.log('ubud')
         getServiceType(this.value);
         handlePriceSelection(event);
         handleBackgroundImage(event)
