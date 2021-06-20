@@ -1,15 +1,15 @@
 {
     "maintenance": {
-        "small": 15,
-        "medium": 20,
-        "large": 25,
-        "jeep": 25
+        "small": 10,
+        "medium": 15,
+        "large": 20,
+        "jeep": 20
     },
 
     "bronze": {
-        "small": 25,
-        "medium": 30,
-        "large": 35,
+        "small": 20,
+        "medium": 25,
+        "large": 30,
         "jeep": 35
     },
 
@@ -21,24 +21,24 @@
     },
 
     "gold": {
-        "small": 55,
-        "medium": 65,
-        "large": 75,
-        "jeep": 80
+        "small": 60,
+        "medium": 70,
+        "large": 80,
+        "jeep": 85
     },
 
     "interior": {
         "small": 20,
-        "medium": 25,
-        "large": 30,
-        "jeep": 35
+        "medium": 30,
+        "large": 35,
+        "jeep": 40
     },
 
     "exterior": {
         "small": 30,
         "medium": 40,
         "large": 50,
-        "jeep": 65
+        "jeep": 60
     },
 
     "oneStage": {

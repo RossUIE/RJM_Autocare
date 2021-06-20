@@ -3,7 +3,7 @@ let carType = "small";
 let serviceType = "maintenance";
 let serviceData = {
     maintenance: {
-        small: 15
+        small: 10
     }
 };
 
